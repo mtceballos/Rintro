@@ -15,7 +15,7 @@ Contents
 
 
 .. toctree::
-   :maxdepth: 20
+   :maxdepth: 4
 
    Rintro
    generalChars
