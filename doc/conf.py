@@ -24,6 +24,7 @@ templates_path = ['_templates']
 html_theme = 'alabaster'
 html_theme = 'classic'
 html_static_path = ['_static']
+html_logo = '_static/Rlogo.jpg'
 
 # from previous configuration
 #===============================
