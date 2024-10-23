@@ -8,12 +8,6 @@
 First Steps in R
 ==================
 
-.. _contents:
-
-
-
-Contents:
-
 .. toctree::
    :maxdepth: 4
 
