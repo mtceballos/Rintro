@@ -12,10 +12,7 @@ First Steps in R
 
 
 
-Contents
-=========
-
-
+Contents:
 
 .. toctree::
    :maxdepth: 4
