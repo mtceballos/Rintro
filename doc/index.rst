@@ -21,7 +21,7 @@ First Steps in R
    statisticalTreatment
    Rstudio
    bibliography
-   pdf
+
 ..   Problems
    
 Indices and tables
