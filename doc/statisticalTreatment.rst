@@ -10,8 +10,10 @@ R contains a very comprehensive library with statistical functions, including th
 
 .. image:: images/distri.png
     :scale: 50 %
-    :align: left
+    :align: center
 
+
+	    
 Associated Functions
 ====================
 
@@ -86,7 +88,7 @@ where :math:`\mu` is the mean of the distribution and :math:`\sigma` the standar
   
 .. image:: images/dnorm_ejemplo.png
     :scale: 50 %
-    :align: left
+    :align: center
 
 2. :magenta:`rnorm(n, mean = 0, sd = 1)`
 
@@ -103,7 +105,7 @@ Random sequence of ``n`` numbers following a normal distribution with mean ``mea
   
 .. image:: images/rnorm_ejemplo.png
     :scale: 50 %
-    :align: left
+    :align: center
 
 To ensure reproducibility, it is important to set the random number seed when performing simulations:
 
@@ -130,7 +132,7 @@ the distribution (:math:`P[X \le x]`) and ``lower.tail = FALSE`` returns the rig
 
 .. image:: images/pnorm_ejemplo.png
     :scale: 50 %
-    :align: left
+    :align: center
 
 ::
 
@@ -162,7 +164,7 @@ which is equivalent to:
   
 .. image:: images/ecdf.png
     :scale: 60 %
-    :align: left
+    :align: center
 
   
 4. :magenta:`qnorm(p, mean = 0, sd = 1, lower.tail = FALSE, log.p = FALSE)`
@@ -252,6 +254,6 @@ The code is executed in R as follows:
   
 .. image:: images/pirandom.jpg
     :scale: 50 %
-    :align: left
+    :align: center
   
 

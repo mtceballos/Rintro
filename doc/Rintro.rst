@@ -38,7 +38,7 @@ others), we have chosen R because:
 
 .. image:: images/hpgraphic.png
     :scale: 70 %
-    :align: left
+    :align: center
 
 (*image from* `R project web page <http://www.r-project.org>`_)
 
@@ -46,7 +46,7 @@ others), we have chosen R because:
 
 .. image:: images/exponential-growth.png
     :scale: 80 %
-    :align: left
+    :align: center
 
 (*from* `R Journal <http://journal.r-project.org/archive/2009-2/>`_)
 

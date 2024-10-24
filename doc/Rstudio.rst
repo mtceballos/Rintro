@@ -7,4 +7,4 @@ a very common one is `RStudio <http://www.rstudio.com/ide/>`_
 
 .. image:: images/rstudio-windows.png
     :scale: 50 %
-    :align: left
+    :align: center

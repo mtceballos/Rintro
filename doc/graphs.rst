@@ -98,7 +98,7 @@ We can generate a histogram:
 
 .. image:: images/histo_clight.png
     :scale: 50 %
-    :align: left
+    :align: center
 
 Or a scatter plot:
 
@@ -120,7 +120,7 @@ Or a scatter plot:
   
 .. image:: images/scatter_HR.png
     :scale: 50 %
-    :align: left
+    :align: center
 
 Let's analyse the distribution of star magnitudes we have just loaded. We will first  create a new list containing
 only two components:
@@ -137,7 +137,7 @@ only two components:
   
 .. image:: images/bw0.png
     :scale: 70 %
-    :align: left
+    :align: center
 
 
 An example of time series: the monthly mean relative sunspot numbers from 1749
@@ -165,7 +165,7 @@ to 1983 (directly available in the package datasets):
 
 .. image:: images/sunspots.png
     :scale: 70 %
-    :align: left
+    :align: center
 
 
 Simple plots
@@ -192,7 +192,7 @@ flexible approach when creating plots:
 
 .. image:: images/cubic_polynomial.png
     :scale: 50 %
-    :align: left
+    :align: center
 
 
 Mathematical Annotation
@@ -212,7 +212,7 @@ The possible symbols are listed under ``?plotmath``. It is also possible to incl
   
 .. image:: images/mathplot.png
     :scale: 70 %
-    :align: left
+    :align: center
    
     
 With R you can also make 3D data representations:
