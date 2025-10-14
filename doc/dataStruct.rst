@@ -408,9 +408,9 @@ Among other restrictions, a *Data Frame* must verify that:
 * Vectors, which are the variables in the data frame, must be of the same length.
 
 .. warning:: 
-  In a data frame, character vectors are automatically converted into factors, and the number of levels can be 
-  determined as the number of different values in such a vector. This default behaviour can be modified with the 
-  ``options(stringsAsFactors = FALSE)`` command.
+  In a data frame, character vectors are automatically converted into factors for R < 4.0.0, and the number of levels can be 
+  determined as the number of different values in such a vector. This default behaviour was modified for R 4.0.0. It can be changed with the 
+  ``options(stringsAsFactors = TRUE/FALSE)`` command.
 
 Basically, in a *Data Frame* all the information is displayed as a **table** where the columns have the 
 same number of rows and can contain different type objects (numbers, characters, ...).
