@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Rintro'
-copyright = '2024, M.T. Ceballos (IFCA), N. Cardiel (UCM)'
+copyright = '2013-2025, M.T. Ceballos (IFCA), N. Cardiel (UCM)'
 author = 'M.T. Ceballos (IFCA), N. Cardiel (UCM)'
 release = '10.0.0'
 
