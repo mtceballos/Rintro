@@ -12,9 +12,11 @@ Introduction
 
 **Why R?** 
 
-Although there are many tools that can be employed for statistical
-analysis (SAS, SPSS, Stata, Minitab, MATLAB, Wolfram Mathematica,... among
-others), we have chosen R because:
+Although many tools are available for statistical analysis (including SAS,
+SPSS, Stata, Minitab, MATLAB, Wolfram Mathematica, among others), as well as
+dedicated statistical packages for programming languages such as Python (see,
+for example, `statsmodels <https://www.statsmodels.org/stable/index.html>`_),
+we have chosen R because:
 
 * It is an **integrated environment**: it has been developed as a whole entity and not as a collection of tools. It includes:
 
@@ -41,14 +43,6 @@ others), we have chosen R because:
     :align: center
 
 (*image from* `R project web page <http://www.r-project.org>`_)
-
-**R** is continuously (and exponentially) growing with the addition of contributed packages.
-
-.. image:: images/exponential-growth.png
-    :scale: 80 %
-    :align: center
-
-(*from* `R Journal <http://journal.r-project.org/archive/2009-2/>`_)
 
 Although... No statistical package can work miracles!
 
