@@ -52,3 +52,11 @@ Although... No statistical package can work miracles!
     :align: center
 
 (*image from* http://www.lovemytool.com)
+
+.. note::
+
+   Regular Python users may be interested in taking a look at `this link
+   <https://github.com/kirudang/R_vs_Python/blob/main/R%20and%20Python%20syntax%20comparison%20for%20%20%20Data%20Scientists.pdf>`_ to see
+   a summary of the most important differences between R and Python programming
+   syntax.
+   
