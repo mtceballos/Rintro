@@ -1,6 +1,7 @@
 ****************
 Data structure
 ****************
+.. role:: bblack
 .. role:: bblue
 .. role:: bred
 .. role:: bmagenta
@@ -37,7 +38,7 @@ Data structure types
 * :bblue:`Arrays`: similar to matrices but they can be multi-dimensional (more than two dimensions)
 
 * :bred:`Factors`: vectors of categorical variables designed to group the components of another vector with the same size
-* **Lists**: ordered collection of objects, where the elements can be of different types
+* :bblack:`Lists`: ordered collection of objects, where the elements can be of different types
 * :bmagenta:`Data Frames`: generalization of matrices where different columns can store different mode data. 
 * :bgreen:`Functions`: objects created by the user and reused to make specific operations.
 

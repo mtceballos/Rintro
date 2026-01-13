@@ -23,11 +23,3 @@ First Steps in R
    bibliography
 
 ..   Problems
-   
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
