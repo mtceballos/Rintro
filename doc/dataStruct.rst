@@ -340,8 +340,8 @@ to these types. This will be covered lately in the  :ref:`functions` section.
   
 .. _lists:
 
-Lists
-------
+:bblack:`Lists`
+---------------
 Lists are ordered collections of objects, where the elements can be of a different type (a list can 
 be a combination of matrices, vectors, other lists, etc.) They are created using the ``list()`` function:
 

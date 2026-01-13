@@ -4,31 +4,31 @@
 }
 
 .red {
-    color: red;
+    color: #AA0000;
 }
 .bred{
-    color: red;
+    color: #AA0000;
     font-weight: bold;
 }
 .blue {
-    color: blue;
+    color: #0088FF;
 }
 .bblue {
-    color: blue;
+    color: #0088FF;
     font-weight: bold;
 }
 .green {
-    color: green;
+    color: #008800;
 }
 .bgreen {
-    color: green;
+    color: #008800;
     font-weight: bold;
 }
 .magenta{
-    color: #FF00FF;
+    color: #AA00AA;
 }
 .bmagenta{
-    color: #FF00FF;
+    color: #AA00AA;
     font-weight: bold;
 }
 .gray{
