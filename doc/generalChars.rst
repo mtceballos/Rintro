@@ -51,9 +51,9 @@ For linux:
 
   [user@pc]$ R				# invoke R
   
-  R version 3.0.1 (2013-05-16) -- "Good Sport"
-  Copyright (C) 2013 The R Foundation for Statistical Computing
-  Platform: x86_64-redhat-linux-gnu (64-bit)
+  R version 4.5.1 (2025-06-13) -- "Great Square Root"
+  Copyright (C) 2025 The R Foundation for Statistical Computing
+  Platform: aarch64-apple-darwin20
 
   R is free software and comes with ABSOLUTELY NO WARRANTY.
   You are welcome to redistribute it under certain conditions.

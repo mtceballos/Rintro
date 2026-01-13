@@ -38,7 +38,7 @@ accomplished by:
 Every algorithm can be resolved using the control structures described above. These structures can be nested so 
 the use of braces "{...}" and proper indentation make the blocks of instructions clearer:
 
-.. code-block:: ini
+::
 
   for (x in seq(-3,3)) {
     if (x < 0) {
