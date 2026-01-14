@@ -125,57 +125,54 @@ The vectorization can be also performed over matrices:
   [3,]  222  276  330
 
   
-**Examples:**
+.. admonition:: Examples
+   :class: dropdown
 
-.. container:: toggle, toggle-hidden
-
-   .. admonition:: Examples
-
-      ::
+   ::
    
 
-         # Some additional examples of matrix algebra:
+      # Some additional examples of matrix algebra:
 
-         > v1 <- c(1,3,5)
-         > v2 <- c(2,-1,3)
+      > v1 <- c(1,3,5)
+      > v2 <- c(2,-1,3)
 
-         > v1%*%v2                   # inner product
-              [,1]
-         [1,]   14
+      > v1%*%v2                   # inner product
+           [,1]
+      [1,]   14
 
-         > sqrt(v1%*%v1))            # vector modulus
-            [,1]
-        [1,] 5.91608
+      > sqrt(v1%*%v1))            # vector modulus
+         [,1]
+     [1,] 5.91608
 
-        > v1%o%v2                   # outer product
-             [,1] [,2] [,3]
-        [1,]    2   -1    3
-        [2,]    6   -3    9
-        [3,]   10   -5   15
-        
-        
-        # Solving the system:
-        #  4 x +   y  -2 z = 0
-        #  2 x - 3 y + 3 z = 9
-        # -6 x - 2 y +   z = 0
-    
-        > A <- matrix(c(4,2,-6,1,-3,-2,-2,3,1),nrow=3)  # system matrix
-        > A
-             [,1] [,2] [,3]
-        [1,]    4    1   -2
-        [2,]    2   -3    3
-        [3,]   -6   -2    1
-    
-        > b <- c(0,9,0)
-        > b
-        [1] 0 9 0
+     > v1%o%v2                   # outer product
+          [,1] [,2] [,3]
+     [1,]    2   -1    3
+     [2,]    6   -3    9
+     [3,]   10   -5   15
+     
+     
+     # Solving the system:
+     #  4 x +   y  -2 z = 0
+     #  2 x - 3 y + 3 z = 9
+     # -6 x - 2 y +   z = 0
+ 
+     > A <- matrix(c(4,2,-6,1,-3,-2,-2,3,1),nrow=3)  # system matrix
+     > A
+          [,1] [,2] [,3]
+     [1,]    4    1   -2
+     [2,]    2   -3    3
+     [3,]   -6   -2    1
+ 
+     > b <- c(0,9,0)
+     > b
+     [1] 0 9 0
 
-        > x <- solve(A,b)           # computing vector x in A x = b
-        > x
-        [1]  0.75 -2.00  0.50
-    
-        > A%*%x                     # checking the solution
-                      [,1]
-        [1,]  1.110223e-16          # = 0 (within rounding error)
-        [2,]  9.000000e+00          # = 9
-        [3,] -5.551115e-17          # = 0 (within rounding error)
+     > x <- solve(A,b)           # computing vector x in A x = b
+     > x
+     [1]  0.75 -2.00  0.50
+ 
+     > A%*%x                     # checking the solution
+                   [,1]
+     [1,]  1.110223e-16          # = 0 (within rounding error)
+     [2,]  9.000000e+00          # = 9
+     [3,] -5.551115e-17          # = 0 (within rounding error)

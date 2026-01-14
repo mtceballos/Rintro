@@ -256,4 +256,40 @@ The code is executed in R as follows:
     :scale: 50 %
     :align: center
   
+Running code in Batch mode
+--------------------------
 
+Is it also possible to execute the previous example in batch mode. For example,
+assume the following code is available in a file named ``exec_pirandom.R``:
+
+::
+
+  pdf("pirandom.pdf")   # define graphical output file
+  source("pirandom.R")  # execute the script, making any function defined in it available
+  pirandom(1000)        # execute the function
+  dev.off()             # close the graphical output file
+
+
+It is possible to run this code automatically using an operating system shell
+command:
+
+.. highlight:: console
+
+::
+  
+  [user@pc work]$ R CMD BATCH exec_pirandom.R
+
+This will generate text file ``exec_pirandom.Rout`` with a log capturing
+everything you would see in the console if you ran the script interactively. In
+particular:
+
+- All commands executed from the script
+
+- Any printed output, messages, or warnings
+
+- Error messages if the script fails
+
+- Session information and timestamps
+
+In our example, the executed code will also generate a PDF file
+``pirandom.pdf`` with the expected plot.

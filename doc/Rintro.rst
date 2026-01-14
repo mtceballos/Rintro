@@ -28,7 +28,9 @@ we have chosen R because:
 
   * Screen graphs and portable format graphs generation 
   
-  * A simple and effective programming language (with *scripting* capabilities)
+  * A simple and effective programming language (with *scripting*
+    capabilities): it incorporates features found in object-oriented and
+    functional programming languages
 
 * It is **free software**! Available through the `project WEB <http://www.r-project.org>`_ or through `CRAN <http://cran.r-project.org>`_ (*Comprehensive R Archive Network*)
 
@@ -53,10 +55,27 @@ Although... No statistical package can work miracles!
 
 (*image from* http://www.lovemytool.com)
 
-.. note::
+.. warning::
 
    Regular Python users may be interested in taking a look at `this link
    <https://github.com/kirudang/R_vs_Python/blob/main/R%20and%20Python%20syntax%20comparison%20for%20%20%20Data%20Scientists.pdf>`_ to see
    a summary of the most important differences between R and Python programming
    syntax.
+   
+
+.. admonition:: Why is it called R?
+   :class: dropdown
+
+   R originated from the statistical programming language S, created at AT&T,
+   and remains largely compatible with it. The name “S,” short for statistics,
+   followed a naming convention similar to another well-known one-letter
+   programming language developed at AT&T: C. Over time, S was acquired by a
+   smaller company, which enhanced it by adding a graphical user interface and
+   released it under the name S-Plus.
+
+   R has since surpassed S and S-Plus in popularity, largely because it is
+   freely available and supported by a broad community of contributors. Due to
+   its open-source foundation, R is sometimes referred to as GNU S, reflecting
+   its association with the GNU Project, a prominent initiative dedicated to
+   open-source software.
    

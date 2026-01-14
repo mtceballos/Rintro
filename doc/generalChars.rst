@@ -10,7 +10,7 @@ Main features of R
 .. note::
   Before starting to work with R, it is advised to create a new dedicated directory where all the work should be included. In fact, if several projects are to be developed at the same time, every project should have its own directory.
 
-For linux:
+For Linux, MacOS:
 
 .. highlight:: console
 
@@ -41,7 +41,7 @@ variables :makevar:`a` and :makevar:`A` are different variables:
 .. _startR:
 
 Starting R 
-===========
+==========
 
 For linux:
 
@@ -91,18 +91,27 @@ For linux:
     --encoding=ENC        Specify encoding to be used for stdin
   ...
   ...
+  Please use 'R CMD command --help' to obtain further information about
+  the usage of 'command'.
+
+  Options --arch, --no-environ, --no-init-file, --no-site-file and --vanilla
+  can be placed between R and CMD, to apply to R processes run by 'command'
+
+Report bugs at <https://bugs.R-project.org>.
   
 .. _exitR:
 
 Quitting R
-===========
+==========
 .. highlight:: r
+
+You can use ``quit()`` or ``q()``.
 
 ::
   
-   > quit()
+   > q()
    Save workspace image? [y/n/c]:   	# possibility of saving info for next session
-   > quit(save="no")                	# finish R without any question
+   > q(save="no")                	# finish R without any question
    > Ctrl-D			    	# key combination equivalent to quit()
 
 Using parenthesis in :command:`quit()` informs R that the command refers to a function and not to a variable.
@@ -110,15 +119,15 @@ Using parenthesis in :command:`quit()` informs R that the command refers to a fu
 .. _helpR:
 
 Help in R
-===========
+=========
 
 ::
 
   > help.start()			# general help displayed in a web browser
   > help("pp") 				# help on function "pp"
-  > ?pp                         	# help on function "pp"
+  > ?pp                         	# help on function "pp" (you know the exact name)
   > help.search("pp")      		# search for instances of the string "pp"
-  > ??pp 				# search for instances of the string "pp"
+  > ??pp 				# fuzzy search for instances of the string "pp"
   > apropos("pp", mode="function")  	# list available functions with "pp" in their names
   > example(topic)                      # run the R code from the *Examples* part of R's
                                         #   online help on topic; try for example example(plot)
@@ -145,27 +154,48 @@ Other useful commands
 ::
 
   > R.version.string
-  [1] "R version 3.0.1 (2013-05-16)"
+  [1] "R version 4.5.1 (2025-06-13)"
+
   > capabilities()
-      jpeg      png     tiff    tcltk      X11     aqua http/ftp  sockets 
-      TRUE     TRUE     TRUE     TRUE     TRUE    FALSE     TRUE     TRUE 
-    libxml     fifo   cledit    iconv      NLS  profmem    cairo 
-      TRUE     TRUE     TRUE     TRUE     TRUE    FALSE     TRUE 
+       jpeg         png        tiff       tcltk         X11        aqua 
+       TRUE        TRUE        TRUE        TRUE        TRUE        TRUE 
+   http/ftp     sockets      libxml        fifo      cledit       iconv 
+       TRUE        TRUE       FALSE        TRUE        TRUE        TRUE 
+        NLS       Rprof     profmem       cairo         ICU long.double 
+       TRUE        TRUE        TRUE        TRUE        TRUE       FALSE 
+    libcurl 
+       TRUE
+
   > citation()
-  
   To cite R in publications use:
 
-    R Core Team (2013). R: A language and environment for statistical
-    computing. R Foundation for Statistical Computing, Vienna, Austria.
-    URL http://www.R-project.org/.
-  ...
-  ...
+    R Core Team (2025). _R: A Language and Environment for Statistical
+    Computing_. R Foundation for Statistical Computing, Vienna, Austria.
+    <https://www.R-project.org/>.
+
+  A BibTeX entry for LaTeX users is
+
+    @Manual{,
+      title = {R: A Language and Environment for Statistical Computing},
+      author = {{R Core Team}},
+      organization = {R Foundation for Statistical Computing},
+      address = {Vienna, Austria},
+      year = {2025},
+      url = {https://www.R-project.org/},
+    }
+
+  We have invested a lot of time and effort in creating R, please cite it
+  when using it for data analysis. See also ‘citation("pkgname")’ for
+  citing R packages.
 
   > R.home()				# return the R 'home' directory
   [1] "/usr/lib64/R"
+
   > getwd() 				# return the working directory
   [1] "/home/user/R"
+
   > setwd("/home/user/newRdir")        	# set new working directory
+
   > dir()				# show content of current directory
   ...					# (different from 'ls()' command
   ...					# which lists objects in current workspace)
