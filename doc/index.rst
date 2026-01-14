@@ -17,6 +17,7 @@ First Steps in R
    basicOps
    controlStructs
    dataReading
+   functions
    graphs
    statisticalTreatment
    Rstudio
