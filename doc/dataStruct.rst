@@ -62,7 +62,7 @@ There are several ways to assign values to a variable:
   > 1.7 -> a		   # assign a value to a vector with only one element (~ scalar)
   > a = 1.7                # assign a value to a vector with only one element (~ scalar)
   > assign("a", 1.7)	   # assign a value to a vector with only one element (~ scalar)
-  
+
 To show the values:
 
 ::
@@ -72,6 +72,14 @@ To show the values:
   > print(a)		   # show the value in the screen (valid in scripts)
   [1] 1.7
 
+**Scalars** (i.e., individual numbers), do not really exist in R. 
+What appear to be individual numbers are actually one-element vectors:
+
+::
+
+  > a[1]
+  [1] 1.7
+  
 To generate a vector with several numeric values:
 
 ::
