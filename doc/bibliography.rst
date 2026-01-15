@@ -16,6 +16,8 @@ Books
 On-line tutorial and courses
 ============================
 
+* https://swcarpentry.github.io/r-novice-gapminder/
+* https://swcarpentry.github.io/r-novice-inflammation/
 * http://www.cyclismo.org/tutorial/R
 * http://tryr.codeschool.com/levels/1/challenges/1
 * *Data Analysis*, COURSERA
@@ -30,7 +32,7 @@ Center for Astrostatistics
 R graphs
 ========
 * `Simple graphics <http://www.harding.edu/fmccown/r/>`_
-* `CRAN Task View: Graphics <http://cran.r-project.org/web/views/Graphics.html>`_
+* `CRAN Task Views <http://cran.r-project.org/web/views/>`_
 
 Blogs
 =====
@@ -38,5 +40,3 @@ Blogs
 * `Quick-R <http://www.statmethods.net/>`_
 * `R-statistics blog <http://www.r-statistics.com/>`_
 * `R-bloggers <http://www.r-bloggers.com/>`_
-* `Revolutions <http://blog.revolutionanalytics.com/>`_
-* `R Wiki <http://rwiki.sciviews.org/doku.php>`_
