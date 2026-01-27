@@ -45,3 +45,7 @@
     color: #CA7900;
     font-weight: bold;    
 }
+
+.no-copybutton .copybtn {
+    display: none !important;
+}

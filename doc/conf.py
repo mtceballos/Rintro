@@ -14,7 +14,14 @@ release = '10.0.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx_togglebutton']
+extensions = [
+    'sphinx_togglebutton',
+    'sphinx_copybutton',
+]
+
+copybutton_prompt_text = r">>> |\.\.\. |\$ |> |\+ |\[0-9]+\] "
+copybutton_prompt_is_regexp = True
+copybutton_only_copy_prompt_lines = False
 
 templates_path = ['_templates']
 
