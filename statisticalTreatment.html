@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statistical Treatment &mdash; Rintro 10.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/default.css?v=216104a7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=335988e4"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=2e8ad693"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="RStudio: an integrated environment" href="Rstudio.html" />
+    <link rel="prev" title="Graphs" href="graphs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Rintro
+              <img src="_static/Rlogo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Rintro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generalChars.html">Main features of R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataStruct.html">Data structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basicOps.html">Basic Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlStructs.html">Control Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataReading.html">Data Reading and Writting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphs.html">Graphs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Statistical Treatment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#associated-functions">Associated Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-probability-distributions">Common probability distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-script">Example script</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-code-in-batch-mode">Running code in Batch mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Rstudio.html">RStudio: an integrated environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography and References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rintro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Statistical Treatment</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/statisticalTreatment.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="statistical-treatment">
+<h1>Statistical Treatment<a class="headerlink" href="#statistical-treatment" title="Link to this heading"></a></h1>
+<p>R contains a very comprehensive library with statistical functions, including the most common probability distributions:</p>
+<a class="reference internal image-reference" href="_images/distri.png"><img alt="_images/distri.png" class="align-center" height="346" src="_images/distri.png" width="441" />
+</a>
+<section id="associated-functions">
+<h2>Associated Functions<a class="headerlink" href="#associated-functions" title="Link to this heading"></a></h2>
+<p>There are several functions associated to every probability distribution, and
+they can be accessed adding a prefix to the distribution name:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span>_______<span class="w">       </span>_______________________________________________________________________
+
+<span class="n">Prefix</span><span class="w">                                    </span><span class="n">Meaning</span>
+_______<span class="w">       </span>_______________________________________________________________________
+
+<span class="w">  </span><span class="n">d</span><span class="w">           </span><span class="n">density</span><span class="w"> </span><span class="n">function</span>
+<span class="w">  </span><span class="n">p</span><span class="w">           </span><span class="n">distribution</span><span class="w"> </span><span class="nf">function </span><span class="p">(</span><span class="n">cumulative</span><span class="w"> </span><span class="n">function</span><span class="p">)</span>
+<span class="w">  </span><span class="n">q</span><span class="w">           </span><span class="n">inverse</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">distribution</span><span class="w"> </span><span class="nf">function </span><span class="p">(</span><span class="n">quantile</span><span class="w"> </span><span class="n">function</span><span class="p">)</span>
+<span class="w">  </span><span class="n">r</span><span class="w">           </span><span class="n">random</span><span class="w"> </span><span class="n">generation</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">probability</span><span class="w"> </span><span class="n">distribution</span>
+_______<span class="w">       </span>_______________________________________________________________________
+</pre></div>
+</div>
+<p>The arguments are obviously different for each associated function. For the <em>Normal Distribution</em>:</p>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="o">?</span><span class="n">Normal</span>
+
+<span class="n">Normal</span><span class="w">                  </span><span class="n">package</span><span class="o">:</span><span class="n">stats</span><span class="w">                  </span><span class="n">R</span><span class="w"> </span><span class="n">Documentation</span>
+
+<span class="n">The</span><span class="w"> </span><span class="n">Normal</span><span class="w"> </span><span class="n">Distribution</span>
+
+<span class="n">Description</span><span class="o">:</span>
+
+<span class="w">   </span><span class="n">Density</span><span class="p">,</span><span class="w"> </span><span class="n">distribution</span><span class="w"> </span><span class="n">function</span><span class="p">,</span><span class="w"> </span><span class="n">quantile</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">random</span>
+<span class="w">   </span><span class="n">generation</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">normal</span><span class="w"> </span><span class="n">distribution</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="n">equal</span><span class="w"> </span><span class="n">to</span><span class="w"> </span>‘<span class="n">mean</span>’
+<span class="w">   </span><span class="n">and</span><span class="w"> </span><span class="n">standard</span><span class="w"> </span><span class="n">deviation</span><span class="w"> </span><span class="n">equal</span><span class="w"> </span><span class="n">to</span><span class="w"> </span>‘<span class="n">sd</span>’<span class="n">.</span>
+
+<span class="n">Usage</span><span class="o">:</span>
+
+
+<span class="w">  </span><span class="nf">dnorm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">pnorm</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">lower.tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">log.p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">qnorm</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">lower.tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">log.p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">rnorm</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+
+<span class="kc">...</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p><span class="magenta">dnorm(x, mean = 0, sd = 1, log = FALSE)</span></p></li>
+</ol>
+<p>It evaluates the density of the normal distribution with mean <code class="docutils literal notranslate"><span class="pre">mean</span></code> and standard deviation <code class="docutils literal notranslate"><span class="pre">sd</span></code> in <code class="docutils literal notranslate"><span class="pre">x</span></code> abscissa.
+The normal distribution has density</p>
+<p><span class="math notranslate nohighlight">\(f(x) = \frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{(x - \mu)^2}{2 \sigma^2}}\)</span></p>
+<p>where <span class="math notranslate nohighlight">\(\mu\)</span> is the mean of the distribution and <span class="math notranslate nohighlight">\(\sigma\)</span> the standard deviation.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="m">-10</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="n">.</span><span class="m">5</span><span class="p">)</span><span class="w">                     </span><span class="c1"># sequence of numbers</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">x</span>
+<span class="w"> </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">-10.0</span><span class="w">  </span><span class="m">-9.5</span><span class="w">  </span><span class="m">-9.0</span><span class="w">  </span><span class="m">-8.5</span><span class="w">  </span><span class="m">-8.0</span><span class="w">  </span><span class="m">-7.5</span><span class="w">  </span><span class="m">-7.0</span><span class="w">  </span><span class="m">-6.5</span><span class="w">  </span><span class="m">-6.0</span><span class="w">  </span><span class="m">-5.5</span><span class="w">  </span><span class="m">-5.0</span><span class="w">  </span><span class="m">-4.5</span>
+<span class="p">[</span><span class="m">13</span><span class="p">]</span><span class="w">  </span><span class="m">-4.0</span><span class="w">  </span><span class="m">-3.5</span><span class="w">  </span><span class="m">-3.0</span><span class="w">  </span><span class="m">-2.5</span><span class="w">  </span><span class="m">-2.0</span><span class="w">  </span><span class="m">-1.5</span><span class="w">  </span><span class="m">-1.0</span><span class="w">  </span><span class="m">-0.5</span><span class="w">   </span><span class="m">0.0</span><span class="w">   </span><span class="m">0.5</span><span class="w">   </span><span class="m">1.0</span><span class="w">   </span><span class="m">1.5</span>
+<span class="p">[</span><span class="m">25</span><span class="p">]</span><span class="w">   </span><span class="m">2.0</span><span class="w">   </span><span class="m">2.5</span><span class="w">   </span><span class="m">3.0</span><span class="w">   </span><span class="m">3.5</span><span class="w">   </span><span class="m">4.0</span><span class="w">   </span><span class="m">4.5</span><span class="w">   </span><span class="m">5.0</span><span class="w">   </span><span class="m">5.5</span><span class="w">   </span><span class="m">6.0</span><span class="w">   </span><span class="m">6.5</span><span class="w">   </span><span class="m">7.0</span><span class="w">   </span><span class="m">7.5</span>
+<span class="p">[</span><span class="m">37</span><span class="p">]</span><span class="w">   </span><span class="m">8.0</span><span class="w">   </span><span class="m">8.5</span><span class="w">   </span><span class="m">9.0</span><span class="w">   </span><span class="m">9.5</span><span class="w">  </span><span class="m">10.0</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">dnorm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="o">=</span><span class="m">2</span><span class="p">)</span><span class="w">                        </span><span class="c1"># Normal distribution with mean=3 and sd=2</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">main</span><span class="o">=</span><span class="s">&quot;Normal Distribution Example&quot;</span><span class="p">)</span><span class="w">        </span><span class="c1"># Plot the result</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/dnorm_ejemplo.png"><img alt="_images/dnorm_ejemplo.png" class="align-center" height="340" src="_images/dnorm_ejemplo.png" width="338" />
+</a>
+<ol class="arabic simple" start="2">
+<li><p><span class="magenta">rnorm(n, mean = 0, sd = 1)</span></p></li>
+</ol>
+<p>Random sequence of <code class="docutils literal notranslate"><span class="pre">n</span></code> numbers following a normal distribution with mean <code class="docutils literal notranslate"><span class="pre">mean</span></code> and standard deviation <code class="docutils literal notranslate"><span class="pre">sd</span></code>.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span><span class="n">mean</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="n">sd</span><span class="o">=</span><span class="m">2</span><span class="p">)</span><span class="w">               </span><span class="c1"># 1000 random numbers with mean=3 and sd=2</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">summary</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="w">   </span><span class="n">Min.</span><span class="w"> </span><span class="m">1</span><span class="n">st</span><span class="w"> </span><span class="n">Qu.</span><span class="w">  </span><span class="n">Median</span><span class="w">    </span><span class="n">Mean</span><span class="w"> </span><span class="m">3</span><span class="n">rd</span><span class="w"> </span><span class="n">Qu.</span><span class="w">    </span><span class="n">Max.</span>
+<span class="m">-3.783</span><span class="w">   </span><span class="m">1.694</span><span class="w">   </span><span class="m">3.003</span><span class="w">   </span><span class="m">3.047</span><span class="w">   </span><span class="m">4.436</span><span class="w">   </span><span class="m">9.864</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">main</span><span class="o">=</span><span class="s">&quot;Normal Distribution Simulation&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Frequency&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">plot</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/rnorm_ejemplo.png"><img alt="_images/rnorm_ejemplo.png" class="align-center" height="339" src="_images/rnorm_ejemplo.png" width="339" />
+</a>
+<p>To ensure reproducibility, it is important to set the random number seed when performing simulations:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">set.seed</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+<span class="w">  </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">-0.44577826</span><span class="w"> </span><span class="m">-1.20585657</span><span class="w">  </span><span class="m">0.04112631</span><span class="w">  </span><span class="m">0.63938841</span><span class="w"> </span><span class="m">-0.78655436</span><span class="w"> </span><span class="m">-0.38548930</span>
+<span class="w">  </span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="m">-0.47586788</span><span class="w">  </span><span class="m">0.71975069</span><span class="w"> </span><span class="m">-0.01850562</span><span class="w"> </span><span class="m">-1.37311776</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+<span class="w">  </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">-0.98242783</span><span class="w"> </span><span class="m">-0.55448870</span><span class="w">  </span><span class="m">0.12138119</span><span class="w"> </span><span class="m">-0.12087232</span><span class="w"> </span><span class="m">-1.33604105</span><span class="w">  </span><span class="m">0.17005748</span>
+<span class="w">  </span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="w">  </span><span class="m">0.15507872</span><span class="w">  </span><span class="m">0.02493187</span><span class="w"> </span><span class="m">-2.04658541</span><span class="w">  </span><span class="m">0.21315411</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">set.seed</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+<span class="w">  </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">-0.44577826</span><span class="w"> </span><span class="m">-1.20585657</span><span class="w">  </span><span class="m">0.04112631</span><span class="w">  </span><span class="m">0.63938841</span><span class="w"> </span><span class="m">-0.78655436</span><span class="w"> </span><span class="m">-0.38548930</span>
+<span class="w">  </span><span class="p">[</span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="m">-0.47586788</span><span class="w">  </span><span class="m">0.71975069</span><span class="w"> </span><span class="m">-0.01850562</span><span class="w"> </span><span class="m">-1.37311776</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><span class="magenta">pnorm(q, mean = 0, sd = 1, lower.tail = FALSE, log.p = FALSE)</span></p></li>
+</ol>
+<p>It evaluates the distribution function (area below the probability
+distribution) for a normal distribution with mean <code class="docutils literal notranslate"><span class="pre">mean</span></code> and standard
+deviation <code class="docutils literal notranslate"><span class="pre">sd</span></code>. By default, <code class="docutils literal notranslate"><span class="pre">lower.tail</span> <span class="pre">=</span> <span class="pre">TRUE</span></code> returns the area in the
+left wing of the distribution (<span class="math notranslate nohighlight">\(P[X \le x]\)</span>) and <code class="docutils literal notranslate"><span class="pre">lower.tail</span> <span class="pre">=</span> <span class="pre">FALSE</span></code>
+returns the right wing (<span class="math notranslate nohighlight">\(P[X &gt; x]\)</span>).</p>
+<a class="reference internal image-reference" href="_images/pnorm_ejemplo.png"><img alt="_images/pnorm_ejemplo.png" class="align-center" height="304" src="_images/pnorm_ejemplo.png" width="323" />
+</a>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">pnorm</span><span class="p">(</span><span class="m">1.5</span><span class="p">,</span><span class="n">mean</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="n">sd</span><span class="o">=</span><span class="m">2</span><span class="p">)</span><span class="w">                             </span><span class="c1"># left wing (default)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.2266274</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">pnorm</span><span class="p">(</span><span class="m">1.5</span><span class="p">,</span><span class="n">mean</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="n">sd</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="n">lower.tail</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span><span class="w">            </span><span class="c1"># right wing</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">0.7733726</span>
+</pre></div>
+</div>
+<p>The R object <code class="docutils literal notranslate"><span class="pre">ecdf(x)</span></code> lets us calculate and plot the <em>Empirical Cumulative
+Distribution Function</em> (useful when the cumulative distribution is not known).
+Let’s see with an example how to plot the cumulative function in the case of a
+normal distribution:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">               </span><span class="c1"># define 1 row and 2 columns to plot</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">               </span><span class="c1"># random numbers following normal distribution</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="nf">ecdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">verticals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">col.points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">,</span>
+<span class="o">+</span><span class="w"> </span><span class="n">col.hor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">col.vert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bisque&quot;</span><span class="p">)</span><span class="w">     </span><span class="c1"># plot Empirical Cumulative Distribution Function</span>
+</pre></div>
+</div>
+<p>which is equivalent to:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pnorm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;CDF using pnorm&quot;</span><span class="p">,</span>
+<span class="o">+</span><span class="w">      </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;darkolivegreen&quot;</span><span class="p">,</span><span class="n">pch</span><span class="o">=</span><span class="m">20</span><span class="p">)</span><span class="w"> </span><span class="c1"># plot Cumulative Distribution Function using &#39;pnorm&#39;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/ecdf.png"><img alt="_images/ecdf.png" class="align-center" height="337" src="_images/ecdf.png" width="596" />
+</a>
+<ol class="arabic simple" start="4">
+<li><p><span class="magenta">qnorm(p, mean = 0, sd = 1, lower.tail = FALSE, log.p = FALSE)</span></p></li>
+</ol>
+<p>It evaluates the inverse of the distribution function (the abscissa for an area <code class="docutils literal notranslate"><span class="pre">p</span></code> under the probability
+distribution) for a normal distribution with mean <code class="docutils literal notranslate"><span class="pre">mean</span></code> and standard deviation <code class="docutils literal notranslate"><span class="pre">sd</span></code>. By default,
+<code class="docutils literal notranslate"><span class="pre">lower.tail</span> <span class="pre">=</span> <span class="pre">TRUE</span></code> assumes that the area is that of the left wing of the distribution and
+<code class="docutils literal notranslate"><span class="pre">lower.tail</span> <span class="pre">=</span> <span class="pre">FALSE</span></code> assumes that is the right wing area.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">qnorm</span><span class="p">(</span><span class="m">0.2266274</span><span class="p">,</span><span class="n">mean</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="n">sd</span><span class="o">=</span><span class="m">2</span><span class="p">)</span><span class="w">                       </span><span class="c1"># left wing (default)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">1.5</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">qnorm</span><span class="p">(</span><span class="m">0.7733726</span><span class="p">,</span><span class="n">mean</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="n">sd</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="n">lower.tail</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span><span class="w">       </span><span class="c1"># right wing</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">1.5</span>
+</pre></div>
+</div>
+</section>
+<section id="common-probability-distributions">
+<h2>Common probability distributions<a class="headerlink" href="#common-probability-distributions" title="Link to this heading"></a></h2>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span>______________________________________________________________________________
+
+<span class="n">Distribution</span><span class="w">                  </span><span class="n">Associated</span><span class="w"> </span><span class="n">Function</span>
+______________________________________________________________________________
+
+<span class="n">Uniform</span><span class="w">                       </span><span class="n">dunif</span><span class="p">,</span><span class="w"> </span><span class="n">punif</span><span class="p">,</span><span class="w"> </span><span class="n">qunif</span><span class="p">,</span><span class="w"> </span><span class="n">runif</span>
+<span class="n">Binomial</span><span class="w">                      </span><span class="n">dbinom</span><span class="p">,</span><span class="w"> </span><span class="n">pbinom</span><span class="p">,</span><span class="w"> </span><span class="n">qbinom</span><span class="p">,</span><span class="w"> </span><span class="n">rbinom</span>
+<span class="n">Poisson</span><span class="w">                       </span><span class="n">dpois</span><span class="p">,</span><span class="w"> </span><span class="n">ppois</span><span class="p">,</span><span class="w"> </span><span class="n">qpois</span><span class="p">,</span><span class="w"> </span><span class="n">rpois</span>
+<span class="kc">...</span><span class="w">                           </span><span class="n">d...</span><span class="p">,</span><span class="w"> </span><span class="n">p...</span><span class="p">,</span><span class="w"> </span><span class="n">q...</span><span class="p">,</span><span class="w"> </span><span class="n">r...</span>
+______________________________________________________________________________
+
+<span class="n">Normal</span><span class="w">                        </span><span class="n">dnorm</span><span class="p">,</span><span class="w"> </span><span class="n">pnorm</span><span class="p">,</span><span class="w"> </span><span class="n">qnorm</span><span class="p">,</span><span class="w"> </span><span class="n">rnorm</span>
+<span class="n">t</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">Student</span><span class="w">                  </span><span class="n">dt</span><span class="p">,</span><span class="w"> </span><span class="n">pt</span><span class="p">,</span><span class="w"> </span><span class="n">qt</span><span class="p">,</span><span class="w"> </span><span class="n">rt</span>
+<span class="n">chi</span><span class="w">                           </span><span class="n">dchisq</span><span class="p">,</span><span class="w"> </span><span class="n">pchisq</span><span class="p">,</span><span class="w"> </span><span class="n">qchisq</span><span class="p">,</span><span class="w"> </span><span class="n">rchisq</span>
+<span class="bp">F</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">Fisher</span><span class="w">                   </span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">pf</span><span class="p">,</span><span class="w"> </span><span class="n">qf</span><span class="p">,</span><span class="w"> </span><span class="n">rf</span>
+<span class="kc">...</span><span class="w">                           </span><span class="n">d...</span><span class="p">,</span><span class="w"> </span><span class="n">p...</span><span class="p">,</span><span class="w"> </span><span class="n">q...</span><span class="p">,</span><span class="w"> </span><span class="n">r...</span>
+______________________________________________________________________________
+</pre></div>
+</div>
+</section>
+<section id="example-script">
+<h2>Example script<a class="headerlink" href="#example-script" title="Link to this heading"></a></h2>
+<p><strong>Purpose</strong>: Estimation of the value of <span class="math notranslate nohighlight">\(\pi\)</span> using random points generated inside a square.</p>
+<p><strong>Procedure</strong>: Calculate the ratio between the <em>inner</em> and <em>outer</em> points in a circle with radius equal to 1,
+inscribed in a square of side equal to 2 (i.e., the circle’s diameter is equal to the square’s side).</p>
+<p>We save the script in a file called <a class="reference download internal" download="" href="_downloads/fa502bc73f27028214369d7d6690776c/pirandom.R"><code class="xref download docutils literal notranslate"><span class="pre">pirandom.R</span></code></a>:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># estimate PI by using random numbers</span>
+<span class="c1">#    A.squ = n = (2*r)²</span>
+<span class="c1">#    A.cir = n.inside = pi * r²</span>
+<span class="c1">#</span>
+<span class="c1">#    pi = n.inside/ r² = 4*n.inside/n</span>
+<span class="c1">#</span>
+<span class="n">pirandom</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w">               </span><span class="c1"># define function</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">runif</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="m">-1</span><span class="p">,</span><span class="m">1</span><span class="p">)</span><span class="w">                </span><span class="c1"># random numbers in [-1,1]</span>
+<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">runif</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="m">-1</span><span class="p">,</span><span class="m">1</span><span class="p">)</span><span class="w">                </span><span class="c1"># random numbers in [-1,1]</span>
+<span class="w">    </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="c1"># plot</span>
+<span class="w">    </span><span class="n">r</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="w">                </span><span class="c1"># distance to centre</span>
+<span class="w">    </span><span class="n">rinside</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">r</span><span class="p">[</span><span class="n">r</span><span class="o">&lt;</span><span class="m">1</span><span class="p">]</span><span class="w">                 </span><span class="c1"># inside circle with r=1?</span>
+<span class="w">    </span><span class="n">n.inside</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">rinside</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">print</span><span class="p">(</span><span class="m">4</span><span class="o">*</span><span class="n">n.inside</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w">               </span><span class="c1"># print pi estimation</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The code is executed in R as follows:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">source</span><span class="p">(</span><span class="s">&quot;pirandom.R&quot;</span><span class="p">)</span><span class="w">                </span><span class="c1"># load the code (function) in the script</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">pirandom</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span><span class="w">                      </span><span class="c1"># run the function for 1000 points</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">3.184</span><span class="w">                             </span><span class="c1"># &#39;pi&#39; value estimation</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/pirandom.jpg"><img alt="_images/pirandom.jpg" class="align-center" height="294" src="_images/pirandom.jpg" width="320" />
+</a>
+<section id="running-code-in-batch-mode">
+<h3>Running code in Batch mode<a class="headerlink" href="#running-code-in-batch-mode" title="Link to this heading"></a></h3>
+<p>Is it also possible to execute the previous example in batch mode. For example,
+assume the following code is available in a file named <code class="docutils literal notranslate"><span class="pre">exec_pirandom.R</span></code>:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">pdf</span><span class="p">(</span><span class="s">&quot;pirandom.pdf&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1"># define graphical output file</span>
+<span class="nf">source</span><span class="p">(</span><span class="s">&quot;pirandom.R&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1"># execute the script, making any function defined in it available</span>
+<span class="nf">pirandom</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span><span class="w">        </span><span class="c1"># execute the function</span>
+<span class="nf">dev.off</span><span class="p">()</span><span class="w">             </span><span class="c1"># close the graphical output file</span>
+</pre></div>
+</div>
+<p>It is possible to run this code automatically using an operating system shell
+command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user@pc work]$ </span>R<span class="w"> </span>CMD<span class="w"> </span>BATCH<span class="w"> </span>exec_pirandom.R
+</pre></div>
+</div>
+<p>This will generate text file <code class="docutils literal notranslate"><span class="pre">exec_pirandom.Rout</span></code> with a log capturing
+everything you would see in the console if you ran the script interactively. In
+particular:</p>
+<ul class="simple">
+<li><p>All commands executed from the script</p></li>
+<li><p>Any printed output, messages, or warnings</p></li>
+<li><p>Error messages if the script fails</p></li>
+<li><p>Session information and timestamps</p></li>
+</ul>
+<p>In our example, the executed code will also generate a PDF file
+<code class="docutils literal notranslate"><span class="pre">pirandom.pdf</span></code> with the expected plot.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="graphs.html" class="btn btn-neutral float-left" title="Graphs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Rstudio.html" class="btn btn-neutral float-right" title="RStudio: an integrated environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2026, M.T. Ceballos (IFCA), N. Cardiel (UCM).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

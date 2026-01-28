@@ -1,0 +1,460 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graphs &mdash; Rintro 10.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/default.css?v=216104a7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=335988e4"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=2e8ad693"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Statistical Treatment" href="statisticalTreatment.html" />
+    <link rel="prev" title="Data Reading and Writting" href="dataReading.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Rintro
+              <img src="_static/Rlogo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Rintro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generalChars.html">Main features of R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataStruct.html">Data structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basicOps.html">Basic Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlStructs.html">Control Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataReading.html">Data Reading and Writting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Graphs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#graphics-package">Graphics package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#important-plotting-functions">Important Plotting Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simple-plots">Simple plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mathematical-annotation">Mathematical Annotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#making-use-of-colours">Making use of colours</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#colour-palettes">Colour Palettes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colour-interpolation">Colour Interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-palettes-and-colour-functions">Additional Palettes and colour functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="statisticalTreatment.html">Statistical Treatment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rstudio.html">RStudio: an integrated environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography and References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rintro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Graphs</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/graphs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="graphs">
+<h1>Graphs<a class="headerlink" href="#graphs" title="Link to this heading"></a></h1>
+<section id="graphics-package">
+<h2>Graphics package<a class="headerlink" href="#graphics-package" title="Link to this heading"></a></h2>
+<p>The “base” 2-D graphics options in R are included in the base package <strong>graphics</strong> (<code class="docutils literal notranslate"><span class="pre">plot</span></code>, <code class="docutils literal notranslate"><span class="pre">hist</span></code>, <code class="docutils literal notranslate"><span class="pre">boxplot</span></code>, etc.):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">plot(x,y)</span></code> and <code class="docutils literal notranslate"><span class="pre">hist(x)</span></code> open a new graphic device if there is not one already open. Defaults are <code class="docutils literal notranslate"><span class="pre">x11</span></code> for Unix, <code class="docutils literal notranslate"><span class="pre">windows</span></code> for Windows and <code class="docutils literal notranslate"><span class="pre">quartz</span></code> for Mac OS X.</p></li>
+<li><p>There are many parameters in these functions  that can be overridden using the <code class="docutils literal notranslate"><span class="pre">par</span></code> function. They are documented in <code class="docutils literal notranslate"><span class="pre">?par</span></code></p></li>
+</ul>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">par</span><span class="p">(</span><span class="s">&quot;pch&quot;</span><span class="p">)</span><span class="w">                         </span><span class="c1"># default plotting symbol (open circle)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">1</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">par</span><span class="p">(</span><span class="n">pch</span><span class="o">=</span><span class="m">2</span><span class="p">)</span><span class="w">                         </span><span class="c1"># change symbol (open triangle)</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">par</span><span class="p">(</span><span class="s">&quot;lty&quot;</span><span class="p">)</span><span class="w">                         </span><span class="c1"># default line type</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;solid&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">par</span><span class="p">(</span><span class="s">&quot;lwd&quot;</span><span class="p">)</span><span class="w">                         </span><span class="c1"># default line width</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">1</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">par</span><span class="p">(</span><span class="s">&quot;col&quot;</span><span class="p">)</span><span class="w">                         </span><span class="c1"># default colour</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;black&quot;</span>
+<span class="o">&gt;</span><span class="w">  </span><span class="nf">par</span><span class="p">(</span><span class="s">&quot;mfrow&quot;</span><span class="p">)</span><span class="w">                      </span><span class="c1"># default number of rows &amp; columns (filled row-wise)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">par</span><span class="p">(</span><span class="s">&quot;mfcol&quot;</span><span class="p">)</span><span class="w">                       </span><span class="c1"># default number of rows &amp; columns (filled column-wise)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span>
+</pre></div>
+</div>
+<p>The plotting process will then be:</p>
+<ol class="arabic simple">
+<li><p>Set a graphics device</p></li>
+</ol>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">pdf</span><span class="p">(</span><span class="n">myfile.pdf</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="m">10</span><span class="n">.</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="m">7.1</span><span class="p">)</span><span class="w">       </span><span class="c1"># landscape output plot in PDF format</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">postscript</span><span class="p">(</span><span class="n">myfile.ps</span><span class="p">)</span><span class="w">                      </span><span class="c1"># PS output</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">png</span><span class="p">(</span><span class="n">myfile.png</span><span class="p">)</span><span class="w">                            </span><span class="c1"># PNG</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">jpeg</span><span class="p">(</span><span class="n">myfile.jpeg</span><span class="p">)</span><span class="w">                          </span><span class="c1"># JPG</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Make a plot (see main functions below)</p></li>
+</ol>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="m">-5</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">x</span><span class="o">**</span><span class="m">2</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Close device</p></li>
+</ol>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">dev.off</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="important-plotting-functions">
+<h2>Important Plotting Functions<a class="headerlink" href="#important-plotting-functions" title="Link to this heading"></a></h2>
+<p><span class="bblue">plot</span>: this function makes scatterplots or other types of R objects plots</p>
+<p><span class="bblue">abline</span>: add a straight line to a plot</p>
+<p><span class="bblue">lines</span>: add connected line segments to a plot</p>
+<p><span class="bblue">segments</span>: add disconnected line segments to a plot</p>
+<p><span class="bblue">points</span>: add points to a plot</p>
+<p><span class="bblue">arrows</span>: add arrows to a plot</p>
+<p><span class="bblue">polygon</span>: add polygons to a plot</p>
+<p><span class="bblue">text</span>: add text labels to a plot</p>
+<p><span class="bblue">title</span>: add labels for <em>X,Y</em> axes, <em>title</em>, <em>subtitle</em>, <em>outer margin</em></p>
+<p><span class="bblue">axis</span>: modify axes ticks and axes labels</p>
+<p>Let’s take the light velocity measures done by Michelson and Morley in their famous experiment. They performed 5 series
+(<em>Expt</em>) with 20 measures each (<em>Run</em>):</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">data</span><span class="p">(</span><span class="n">morley</span><span class="p">)</span><span class="w">                       </span><span class="c1"># data are in &#39;base&#39; package loaded by default</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">morley</span>
+<span class="w">    </span><span class="n">Expt</span><span class="w"> </span><span class="n">Run</span><span class="w"> </span><span class="n">Speed</span>
+<span class="m">001</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">1</span><span class="w">   </span><span class="m">850</span>
+<span class="m">002</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">2</span><span class="w">   </span><span class="m">740</span>
+<span class="m">003</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">3</span><span class="w">   </span><span class="m">900</span>
+<span class="m">004</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">4</span><span class="w">  </span><span class="m">1070</span>
+<span class="kc">...</span>
+<span class="m">100</span><span class="w">    </span><span class="m">5</span><span class="w">  </span><span class="m">20</span><span class="w">   </span><span class="m">870</span>
+</pre></div>
+</div>
+<p>We can generate a histogram:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">hist</span><span class="p">(</span><span class="n">morley</span><span class="o">$</span><span class="n">Speed</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;Speed of light measurements&quot;</span><span class="p">,</span>
+<span class="o">+</span><span class="w">      </span><span class="n">xlab</span><span class="o">=</span><span class="s">&quot;c-299000 km/s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="s">&quot;frequency&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/histo_clight.png"><img alt="_images/histo_clight.png" class="align-center" height="340" src="_images/histo_clight.png" width="340" />
+</a>
+<p>Or a scatter plot:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># read web file (fill=TRUE if some rows have missing values)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">hip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/mtceballos/Rintro/refs/heads/main/doc/HIP_star.dat&quot;</span><span class="p">,</span>
+<span class="o">+</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">hip</span><span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;HIP&quot;</span><span class="w">   </span><span class="s">&quot;Vmag&quot;</span><span class="w">  </span><span class="s">&quot;RA&quot;</span><span class="w">    </span><span class="s">&quot;DE&quot;</span><span class="w">    </span><span class="s">&quot;Plx&quot;</span><span class="w">   </span><span class="s">&quot;pmRA&quot;</span><span class="w">  </span><span class="s">&quot;pmDE&quot;</span><span class="w">  </span><span class="s">&quot;e_Plx&quot;</span><span class="w"> </span><span class="s">&quot;B.V&quot;</span><span class="w">    </span><span class="c1"># show columns</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">hip</span><span class="o">$</span><span class="n">B.V</span><span class="p">,</span><span class="n">hip</span><span class="o">$</span><span class="n">Vmag</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">13</span><span class="p">,</span><span class="m">0</span><span class="p">))</span><span class="w">                </span><span class="c1"># scatter plot (black open circle points)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">lines</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span><span class="m">2.5</span><span class="p">),</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">points</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1.5</span><span class="p">),</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="m">1.5</span><span class="p">,</span><span class="m">1.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Fake point&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">title</span><span class="p">(</span><span class="n">main</span><span class="o">=</span><span class="s">&quot;HR diagram&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cex.main</span><span class="o">=</span><span class="m">1.5</span><span class="p">,</span><span class="w"> </span><span class="n">col.main</span><span class="o">=</span><span class="s">&quot;magenta&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">axis</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;violet&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/scatter_HR.png"><img alt="_images/scatter_HR.png" class="align-center" height="338" src="_images/scatter_HR.png" width="340" />
+</a>
+<p>Let’s analyse the distribution of star magnitudes we have just loaded. We will first  create a new list containing
+only two components:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">hipBmag</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">hip</span><span class="o">$</span><span class="n">B.V</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hip</span><span class="o">$</span><span class="n">Vmag</span><span class="w">                      </span><span class="c1"># calculate B magnitude as &quot;B.V&quot; + &quot;Vmag&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">newlist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hip</span><span class="o">$</span><span class="n">Vmag</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hipBmag</span><span class="p">)</span><span class="w">          </span><span class="c1"># generate a new named list</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">newlist</span><span class="p">)</span><span class="w">                                     </span><span class="c1"># show elements of the new list</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;V&quot;</span><span class="w"> </span><span class="s">&quot;B&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">boxplot</span><span class="p">(</span><span class="n">newlist</span><span class="p">,</span><span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w">                   </span><span class="c1"># create a &quot;box-and-whiskers&quot; plot</span>
+<span class="o">+</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;Magnitude Distribution&quot;</span><span class="p">,</span><span class="n">xlab</span><span class="o">=</span><span class="s">&quot;magnitude&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/bw0.png"><img alt="_images/bw0.png" class="align-center" height="477" src="_images/bw0.png" width="477" />
+</a>
+<p>An example of time series: the monthly mean relative sunspot numbers from 1749
+to 1983 (directly available in the package datasets):</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">sunspots</span>
+<span class="w">       </span><span class="n">Jan</span><span class="w">   </span><span class="n">Feb</span><span class="w">   </span><span class="n">Mar</span><span class="w">   </span><span class="n">Apr</span><span class="w">   </span><span class="n">May</span><span class="w">   </span><span class="n">Jun</span><span class="w">   </span><span class="n">Jul</span><span class="w">   </span><span class="n">Aug</span><span class="w">   </span><span class="n">Sep</span><span class="w">   </span><span class="n">Oct</span><span class="w">   </span><span class="n">Nov</span><span class="w">   </span><span class="n">Dec</span>
+<span class="m">1749</span><span class="w">  </span><span class="m">58.0</span><span class="w">  </span><span class="m">62.6</span><span class="w">  </span><span class="m">70.0</span><span class="w">  </span><span class="m">55.7</span><span class="w">  </span><span class="m">85.0</span><span class="w">  </span><span class="m">83.5</span><span class="w">  </span><span class="m">94.8</span><span class="w">  </span><span class="m">66.3</span><span class="w">  </span><span class="m">75.9</span><span class="w">  </span><span class="m">75.5</span><span class="w"> </span><span class="m">158.6</span><span class="w">  </span><span class="m">85.2</span>
+<span class="m">1750</span><span class="w">  </span><span class="m">73.3</span><span class="w">  </span><span class="m">75.9</span><span class="w">  </span><span class="m">89.2</span><span class="w">  </span><span class="m">88.3</span><span class="w">  </span><span class="m">90.0</span><span class="w"> </span><span class="m">100.0</span><span class="w">  </span><span class="m">85.4</span><span class="w"> </span><span class="m">103.0</span><span class="w">  </span><span class="m">91.2</span><span class="w">  </span><span class="m">65.7</span><span class="w">  </span><span class="m">63.3</span><span class="w">  </span><span class="m">75.4</span>
+<span class="m">1751</span><span class="w">  </span><span class="m">70.0</span><span class="w">  </span><span class="m">43.5</span><span class="w">  </span><span class="m">45.3</span><span class="w">  </span><span class="m">56.4</span><span class="w">  </span><span class="m">60.7</span><span class="w">  </span><span class="m">50.7</span><span class="w">  </span><span class="m">66.3</span><span class="w">  </span><span class="m">59.8</span><span class="w">  </span><span class="m">23.5</span><span class="w">  </span><span class="m">23.2</span><span class="w">  </span><span class="m">28.5</span><span class="w">  </span><span class="m">44.0</span>
+<span class="w">  </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span>
+<span class="w">  </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span>
+<span class="w">  </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span><span class="w">     </span><span class="n">.</span>
+<span class="m">1981</span><span class="w"> </span><span class="m">114.0</span><span class="w"> </span><span class="m">141.3</span><span class="w"> </span><span class="m">135.5</span><span class="w"> </span><span class="m">156.4</span><span class="w"> </span><span class="m">127.5</span><span class="w">  </span><span class="m">90.0</span><span class="w"> </span><span class="m">143.8</span><span class="w"> </span><span class="m">158.7</span><span class="w"> </span><span class="m">167.3</span><span class="w"> </span><span class="m">162.4</span><span class="w"> </span><span class="m">137.5</span><span class="w"> </span><span class="m">150.1</span>
+<span class="m">1982</span><span class="w"> </span><span class="m">111.2</span><span class="w"> </span><span class="m">163.6</span><span class="w"> </span><span class="m">153.8</span><span class="w"> </span><span class="m">122.0</span><span class="w">  </span><span class="m">82.2</span><span class="w"> </span><span class="m">110.4</span><span class="w"> </span><span class="m">106.1</span><span class="w"> </span><span class="m">107.6</span><span class="w"> </span><span class="m">118.8</span><span class="w">  </span><span class="m">94.7</span><span class="w">  </span><span class="m">98.1</span><span class="w"> </span><span class="m">127.0</span>
+<span class="m">1983</span><span class="w">  </span><span class="m">84.3</span><span class="w">  </span><span class="m">51.0</span><span class="w">  </span><span class="m">66.5</span><span class="w">  </span><span class="m">80.7</span><span class="w">  </span><span class="m">99.2</span><span class="w">  </span><span class="m">91.1</span><span class="w">  </span><span class="m">82.2</span><span class="w">  </span><span class="m">71.8</span><span class="w">  </span><span class="m">50.3</span><span class="w">  </span><span class="m">55.8</span><span class="w">  </span><span class="m">33.3</span><span class="w">  </span><span class="m">33.4</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">png</span><span class="p">(</span><span class="s">&quot;sunspots.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="m">800</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="m">400</span><span class="p">)</span><span class="w">  </span><span class="c1"># define output to PNG file</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">sunspots</span><span class="p">)</span><span class="w">                              </span><span class="c1"># plot time series</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">dev.off</span><span class="p">()</span><span class="w">                                   </span><span class="c1"># close PNG file</span>
+<span class="n">null</span><span class="w"> </span><span class="n">device</span>
+<span class="w">          </span><span class="m">1</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/sunspots.png"><img alt="_images/sunspots.png" class="align-center" height="280" src="_images/sunspots.png" width="560" />
+</a>
+</section>
+<section id="simple-plots">
+<h2>Simple plots<a class="headerlink" href="#simple-plots" title="Link to this heading"></a></h2>
+<p>Although R provides high-level graphics facilities, these tools are built on
+a set of flexible low-level functions, which sometimes constitute a more
+flexible approach when creating plots:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># define function to be plotted</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">seq</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="n">length</span><span class="o">=</span><span class="m">100</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">x</span><span class="o">**</span><span class="m">3</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot.new</span><span class="p">()</span><span class="w">                                  </span><span class="c1"># a new plot is created</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot.window</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">-30</span><span class="p">,</span><span class="m">30</span><span class="p">))</span><span class="w">    </span><span class="c1"># set up the world coordinate system</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">lines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="m">4</span><span class="p">)</span><span class="w">                   </span><span class="c1"># plot the curve (red, line width=4)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">axis</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">at</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="m">-2</span><span class="p">,</span><span class="m">-1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">))</span><span class="w">        </span><span class="c1"># draw X-axis and ticks</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">axis</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">at</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">-30</span><span class="p">,</span><span class="m">-20</span><span class="p">,</span><span class="m">-10</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">20</span><span class="p">,</span><span class="m">30</span><span class="p">),</span>
+<span class="o">+</span><span class="w">      </span><span class="n">las</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">                                 </span><span class="c1"># draw Y-axis and ticks</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">title</span><span class="p">(</span><span class="s">&quot;A cubic polynomial&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/cubic_polynomial.png"><img alt="_images/cubic_polynomial.png" class="align-center" height="525" src="_images/cubic_polynomial.png" width="525" />
+</a>
+</section>
+<section id="mathematical-annotation">
+<h2>Mathematical Annotation<a class="headerlink" href="#mathematical-annotation" title="Link to this heading"></a></h2>
+<p>Mathematical symbols can be annotated in R graphs using <em>expressions</em>
+(<code class="docutils literal notranslate"><span class="pre">expression</span></code> function).  The possible symbols are listed under
+<code class="docutils literal notranslate"><span class="pre">?plotmath</span></code>. It is also possible to include computed values in the
+annotation:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">11</span><span class="o">:</span><span class="m">20</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="nf">expression</span><span class="p">(</span><span class="s">&quot;Fake points (&quot;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">hat</span><span class="p">(</span><span class="n">omega</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">bar</span><span class="p">(</span><span class="n">lambda</span><span class="p">)</span><span class="w"> </span><span class="o">*</span>
+<span class="o">+</span><span class="w"> </span><span class="s">&quot;) correlation&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">xlab</span><span class="o">=</span><span class="nf">expression</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="nf">hat</span><span class="p">(</span><span class="n">omega</span><span class="p">)[</span><span class="n">j</span><span class="p">]</span><span class="o">/</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">)),</span>
+<span class="o">+</span><span class="w"> </span><span class="n">ylab</span><span class="o">=</span><span class="nf">expression</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">bar</span><span class="p">(</span><span class="n">lambda</span><span class="p">))),</span><span class="w"> </span><span class="n">sub</span><span class="o">=</span><span class="nf">substitute</span><span class="p">(</span><span class="n">N</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">))),</span>
+<span class="o">+</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">1.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/mathplot.png"><img alt="_images/mathplot.png" class="align-center" height="242" src="_images/mathplot.png" width="475" />
+</a>
+<p>With R you can also make 3D data representations:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w">  </span><span class="nf">demo</span><span class="p">(</span><span class="n">persp</span><span class="p">)</span>
+<span class="kc">...</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/persp_ejemplo.png"><img alt="_images/persp_ejemplo.png" class="align-center" height="412" src="_images/persp_ejemplo.png" width="805" />
+</a>
+<p>Or image representations:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">demo</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/image_ejemplo.png"><img alt="_images/image_ejemplo.png" class="align-center" height="442" src="_images/image_ejemplo.png" width="455" />
+</a>
+<p>With R you can even make 3D interactive representations:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">library</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">attach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">scatter3d</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span><span class="w"> </span><span class="n">disp</span><span class="p">,</span><span class="w"> </span><span class="n">mpg</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/scatter3d.png"><img alt="_images/scatter3d.png" class="align-center" height="318" src="_images/scatter3d.png" width="296" />
+</a>
+</section>
+<section id="making-use-of-colours">
+<h2>Making use of colours<a class="headerlink" href="#making-use-of-colours" title="Link to this heading"></a></h2>
+<p>The colours to use in R graphs can be displayed with:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">colors</span><span class="p">()</span>
+<span class="w">  </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="w">                </span><span class="s">&quot;aliceblue&quot;</span><span class="w">            </span><span class="s">&quot;antiquewhite&quot;</span>
+<span class="w">  </span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;antiquewhite1&quot;</span><span class="w">        </span><span class="s">&quot;antiquewhite2&quot;</span><span class="w">        </span><span class="s">&quot;antiquewhite3&quot;</span>
+<span class="w">  </span><span class="kc">...</span>
+<span class="w">  </span><span class="p">[</span><span class="m">652</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;yellow&quot;</span><span class="w">               </span><span class="s">&quot;yellow1&quot;</span><span class="w">              </span><span class="s">&quot;yellow2&quot;</span>
+<span class="w">  </span><span class="p">[</span><span class="m">655</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;yellow3&quot;</span><span class="w">              </span><span class="s">&quot;yellow4&quot;</span><span class="w">              </span><span class="s">&quot;yellowgreen&quot;</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">demo</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/Rcolors1.png"><img alt="_images/Rcolors1.png" class="align-center" height="340" src="_images/Rcolors1.png" width="664" />
+</a>
+<p>(See the Colors Chart at <a class="reference external" href="http://research.stowers-institute.org/efg/R/Color/Chart/index.htm">http://research.stowers-institute.org/efg/R/Color/Chart/index.htm</a>)</p>
+<p>However, the use of R colour functions (package <code class="docutils literal notranslate"><span class="pre">grDevices</span></code>) is highly
+recommendable when plotting coloured graphs.</p>
+<section id="colour-palettes">
+<h3>Colour Palettes<a class="headerlink" href="#colour-palettes" title="Link to this heading"></a></h3>
+<p>A vector of <em>n</em> contiguous colours can be created using the following functions:</p>
+<p><em>rainbow(n, s = 1, v = 1, start = 0, end = max(1, n - 1)/n, alpha = 1)</em></p>
+<p><em>heat.colors(n, alpha = 1)</em></p>
+<p><em>terrain.colors(n, alpha = 1)</em></p>
+<p><em>topo.colors(n, alpha = 1)</em></p>
+<p><em>cm.colors(n, alpha = 1)</em></p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="nf">rainbow</span><span class="p">(</span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;rainbow(10)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cex.main</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="nf">heat.colors</span><span class="p">(</span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;heat.colors(10)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cex.main</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="nf">terrain.colors</span><span class="p">(</span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;terrain.colors(10)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cex.main</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="nf">topo.colors</span><span class="p">(</span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;topo.colors(10)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cex.main</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="nf">cm.colors</span><span class="p">(</span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;cm.colors(10)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cex.main</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <em>n</em> parameter refers to the number of palette colours requested, and
+<em>alpha</em> is the number in [0,1] specified to get transparency (see full
+documentation in <code class="docutils literal notranslate"><span class="pre">help(rainbow)</span></code>).</p>
+<a class="reference internal image-reference" href="_images/Rpalettes2.png"><img alt="_images/Rpalettes2.png" class="align-center" height="329" src="_images/Rpalettes2.png" width="716" />
+</a>
+</section>
+<section id="colour-interpolation">
+<h3>Colour Interpolation<a class="headerlink" href="#colour-interpolation" title="Link to this heading"></a></h3>
+<p>There are functions in R that return functions that interpolate a set of given
+colours to create new colour palettes and colour ramps:</p>
+<ul class="simple">
+<li><p><strong>colorRamp</strong>: returns a ‘function’ that maps values between 0 and 1 to
+colours.</p></li>
+</ul>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">pal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">colorRamp</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;green&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">))</span><span class="w">                        </span><span class="c1"># define the function</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">pal</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="w">                                             </span><span class="c1"># column 1: RED content</span>
+<span class="w">      </span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="w">                                 </span><span class="c1"># column 2: GREEN content</span>
+<span class="w"> </span><span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">    </span><span class="m">0</span><span class="w">  </span><span class="m">255</span><span class="w">    </span><span class="m">0</span><span class="w">                                 </span><span class="c1"># column 3: BLUE content</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">pal</span><span class="p">(</span><span class="m">0.5</span><span class="p">)</span>
+<span class="w">     </span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w">  </span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w">  </span><span class="p">[,</span><span class="m">3</span><span class="p">]</span>
+<span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">    </span><span class="m">0</span><span class="w"> </span><span class="m">127.5</span><span class="w"> </span><span class="m">127.5</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">pal</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="w">                                             </span><span class="c1"># BLUE colour</span>
+<span class="w">     </span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">3</span><span class="p">]</span>
+<span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">  </span><span class="m">255</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">pal</span><span class="p">(</span><span class="nf">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="n">len</span><span class="o">=</span><span class="m">5</span><span class="p">))</span>
+<span class="w">     </span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w">   </span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w">   </span><span class="p">[,</span><span class="m">3</span><span class="p">]</span>
+<span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">    </span><span class="m">0</span><span class="w"> </span><span class="m">255.00</span><span class="w">   </span><span class="m">0.00</span>
+<span class="p">[</span><span class="m">2</span><span class="p">,]</span><span class="w">    </span><span class="m">0</span><span class="w"> </span><span class="m">191.25</span><span class="w">  </span><span class="m">63.75</span>
+<span class="p">[</span><span class="m">3</span><span class="p">,]</span><span class="w">    </span><span class="m">0</span><span class="w"> </span><span class="m">127.50</span><span class="w"> </span><span class="m">127.50</span>
+<span class="p">[</span><span class="m">4</span><span class="p">,]</span><span class="w">    </span><span class="m">0</span><span class="w">  </span><span class="m">63.75</span><span class="w"> </span><span class="m">191.25</span>
+<span class="p">[</span><span class="m">5</span><span class="p">,]</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0.00</span><span class="w"> </span><span class="m">255.00</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>colorRampPalette</strong>: returns a function that takes an integer argument and returns that number of colours interpolating the given sequence</p></li>
+</ul>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="n">mypal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">colorRampPalette</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="s">&quot;green&quot;</span><span class="p">))</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">mypal</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+<span class="w"> </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;#FF0000&quot;</span><span class="w"> </span><span class="s">&quot;#E21C00&quot;</span><span class="w"> </span><span class="s">&quot;#C63800&quot;</span><span class="w"> </span><span class="s">&quot;#AA5500&quot;</span><span class="w"> </span><span class="s">&quot;#8D7100&quot;</span><span class="w"> </span><span class="s">&quot;#718D00&quot;</span><span class="w"> </span><span class="s">&quot;#55AA00&quot;</span>
+<span class="w"> </span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;#38C600&quot;</span><span class="w"> </span><span class="s">&quot;#1CE200&quot;</span><span class="w"> </span><span class="s">&quot;#00FF00&quot;</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="nf">mypal</span><span class="p">(</span><span class="m">10</span><span class="p">),</span>
+<span class="o">+</span><span class="w">      </span><span class="n">cex</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;colorRampPalette(c(\&quot;red\&quot;,\&quot;green\&quot;))&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cex.main</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/colorRampPalette1.png"><img alt="_images/colorRampPalette1.png" class="align-center" height="176" src="_images/colorRampPalette1.png" width="338" />
+</a>
+</section>
+<section id="additional-palettes-and-colour-functions">
+<h3>Additional Palettes and colour functions<a class="headerlink" href="#additional-palettes-and-colour-functions" title="Link to this heading"></a></h3>
+<p>There is one package installable from CRAN with additional colour palettes
+(<em>sequential</em>, <em>diverging</em> and <em>qualitative</em> palettes), that can be used with
+<code class="docutils literal notranslate"><span class="pre">colorRamp</span></code> and <code class="docutils literal notranslate"><span class="pre">colorRampPalette</span></code>: <strong>RColorBrewer</strong></p>
+<a class="reference internal image-reference" href="_images/color_brewer_colors.png"><img alt="_images/color_brewer_colors.png" class="align-center" height="396" src="_images/color_brewer_colors.png" width="306" />
+</a>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">library</span><span class="p">(</span><span class="n">RColorBrewer</span><span class="p">)</span><span class="w">                      </span><span class="c1"># load library</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="n">colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">brewer.pal</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YlOrRd&quot;</span><span class="p">)</span><span class="w">          </span><span class="c1"># select 4 of the 9 colours from &quot;YlOrRd&quot; sequence</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="n">colors</span><span class="w">                                     </span><span class="c1"># show colours selected</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;#FFFFB2&quot;</span><span class="w"> </span><span class="s">&quot;#FECC5C&quot;</span><span class="w"> </span><span class="s">&quot;#FD8D3C&quot;</span><span class="w"> </span><span class="s">&quot;#E31A1C&quot;</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="n">mypal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">colorRampPalette</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span><span class="w">          </span><span class="c1"># create a new (interpolated) palette</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">image</span><span class="p">(</span><span class="n">volcano</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mypal</span><span class="p">(</span><span class="m">20</span><span class="p">))</span><span class="w">            </span><span class="c1"># plot image using 20 colours from new palette</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/brewerVolcano.png"><img alt="_images/brewerVolcano.png" class="align-center" height="340" src="_images/brewerVolcano.png" width="337" />
+</a>
+<p>When plotting a scatter plot with a lot of points, two options can be used to clarify the plot: <code class="docutils literal notranslate"><span class="pre">smoothScatter</span></code> and
+<em>transparency</em>:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">10000</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="m">10000</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">smoothScatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;smoothScatter function&quot;</span><span class="p">)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="nf">rgb</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0.1</span><span class="p">),</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;Scatterplot with transparency&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/manyPoints.png"><img alt="_images/manyPoints.png" class="align-center" height="259" src="_images/manyPoints.png" width="536" />
+</a>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dataReading.html" class="btn btn-neutral float-left" title="Data Reading and Writting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="statisticalTreatment.html" class="btn btn-neutral float-right" title="Statistical Treatment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2026, M.T. Ceballos (IFCA), N. Cardiel (UCM).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

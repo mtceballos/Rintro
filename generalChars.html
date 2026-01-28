@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main features of R &mdash; Rintro 10.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/default.css?v=216104a7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=335988e4"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=2e8ad693"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data structure" href="dataStruct.html" />
+    <link rel="prev" title="Introduction" href="Rintro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Rintro
+              <img src="_static/Rlogo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Rintro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Main features of R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starting-r">Starting R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quitting-r">Quitting R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#help-in-r">Help in R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-useful-commands">Other useful commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dataStruct.html">Data structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basicOps.html">Basic Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlStructs.html">Control Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataReading.html">Data Reading and Writting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphs.html">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statisticalTreatment.html">Statistical Treatment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rstudio.html">RStudio: an integrated environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography and References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rintro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Main features of R</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/generalChars.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="main-features-of-r">
+<h1>Main features of R<a class="headerlink" href="#main-features-of-r" title="Link to this heading"></a></h1>
+<div class="admonition note" id="chars">
+<p class="admonition-title">Note</p>
+<p>Before starting to work with R, it is advised to create a new dedicated directory where all the work should be included. In fact, if several projects are to be developed at the same time, every project should have its own directory.</p>
+</div>
+<p>For Linux, MacOS:</p>
+<div class="no-copybutton highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[user@pc]$ </span>mkdir<span class="w"> </span>work
+<span class="gp">[user@pc]$ </span><span class="nb">cd</span><span class="w"> </span>work
+<span class="gp">[user@pc work]$ </span>R
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>R is case-sensitive, thus in this example:</p>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+</pre></div>
+</div>
+<p>variables <strong class="makevar">a</strong> and <strong class="makevar">A</strong> are different variables:</p>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">A</span><span class="w">                                     </span><span class="c1"># is variable &#39;A&#39; equal to variable &#39;a&#39; ?</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="kc">FALSE</span>
+</pre></div>
+</div>
+<section id="starting-r">
+<span id="startr"></span><h2>Starting R<a class="headerlink" href="#starting-r" title="Link to this heading"></a></h2>
+<p>For linux:</p>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">user</span><span class="o">@</span><span class="n">pc</span><span class="p">]</span><span class="o">$</span><span class="w"> </span><span class="n">R</span><span class="w">                         </span><span class="c1"># invoke R</span>
+
+<span class="n">R</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="m">4.5</span><span class="n">.</span><span class="m">1</span><span class="w"> </span><span class="p">(</span><span class="m">2025-06-13</span><span class="p">)</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="s">&quot;Great Square Root&quot;</span>
+<span class="nf">Copyright </span><span class="p">(</span><span class="n">C</span><span class="p">)</span><span class="w"> </span><span class="m">2025</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">Foundation</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">Statistical</span><span class="w"> </span><span class="n">Computing</span>
+<span class="n">Platform</span><span class="o">:</span><span class="w"> </span><span class="n">aarch64</span><span class="o">-</span><span class="n">apple</span><span class="o">-</span><span class="n">darwin20</span>
+
+<span class="n">R</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">free</span><span class="w"> </span><span class="n">software</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">comes</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">ABSOLUTELY</span><span class="w"> </span><span class="n">NO</span><span class="w"> </span><span class="n">WARRANTY.</span>
+<span class="n">You</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">redistribute</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">under</span><span class="w"> </span><span class="n">certain</span><span class="w"> </span><span class="n">conditions.</span>
+<span class="n">Type</span><span class="w"> </span><span class="s">&#39;license()&#39;</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="s">&#39;licence()&#39;</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">distribution</span><span class="w"> </span><span class="n">details.</span>
+
+<span class="w">  </span><span class="n">Natural</span><span class="w"> </span><span class="n">language</span><span class="w"> </span><span class="n">support</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">running</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">English</span><span class="w"> </span><span class="n">locale</span>
+
+<span class="n">R</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">collaborative</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">many</span><span class="w"> </span><span class="n">contributors.</span>
+<span class="n">Type</span><span class="w"> </span><span class="s">&#39;contributors()&#39;</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="n">and</span>
+<span class="s">&#39;citation()&#39;</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">how</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">cite</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">packages</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">publications.</span>
+
+<span class="n">Type</span><span class="w"> </span><span class="s">&#39;demo()&#39;</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">demos</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;help()&#39;</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">on</span><span class="o">-</span><span class="n">line</span><span class="w"> </span><span class="n">help</span><span class="p">,</span><span class="w"> </span><span class="n">or</span>
+<span class="s">&#39;help.start()&#39;</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">HTML</span><span class="w"> </span><span class="n">browser</span><span class="w"> </span><span class="n">interface</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">help.</span>
+<span class="n">Type</span><span class="w"> </span><span class="s">&#39;q()&#39;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">quit</span><span class="w"> </span><span class="n">R.</span>
+
+<span class="o">&gt;</span><span class="w">                                    </span><span class="c1">#  R command line prompt</span>
+</pre></div>
+</div>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">user</span><span class="o">@</span><span class="n">pc</span><span class="p">]</span><span class="o">$</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">--</span><span class="n">silent</span><span class="w">                </span><span class="c1">#  Suppress welcome message</span>
+<span class="p">[</span><span class="n">user</span><span class="o">@</span><span class="n">pc</span><span class="p">]</span><span class="o">$</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">--</span><span class="n">help</span><span class="w">                  </span><span class="c1">#  Show R options</span>
+
+<span class="n">Usage</span><span class="o">:</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="p">[</span><span class="n">options</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">&lt;</span><span class="w"> </span><span class="n">infile</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="o">&gt;</span><span class="w"> </span><span class="n">outfile</span><span class="p">]</span>
+<span class="w">  </span><span class="n">or</span><span class="o">:</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">CMD</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="p">[</span><span class="n">arguments</span><span class="p">]</span>
+
+<span class="n">Start</span><span class="w"> </span><span class="n">R</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">system</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">statistical</span><span class="w"> </span><span class="n">computation</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">graphics</span><span class="p">,</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span>
+<span class="n">specified</span><span class="w"> </span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">invoke</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">tool</span><span class="w"> </span><span class="n">via</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="s">&#39;R CMD&#39;</span><span class="w"> </span><span class="n">interface.</span>
+
+<span class="n">Options</span><span class="o">:</span>
+<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">help</span><span class="w">            </span><span class="n">Print</span><span class="w"> </span><span class="n">short</span><span class="w"> </span><span class="n">help</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">exit</span>
+<span class="w">  </span><span class="o">--</span><span class="n">version</span><span class="w">             </span><span class="n">Print</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">exit</span>
+<span class="w">  </span><span class="o">--</span><span class="n">encoding</span><span class="o">=</span><span class="n">ENC</span><span class="w">        </span><span class="n">Specify</span><span class="w"> </span><span class="n">encoding</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">stdin</span>
+<span class="kc">...</span>
+<span class="kc">...</span>
+<span class="n">Please</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="s">&#39;R CMD command --help&#39;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">obtain</span><span class="w"> </span><span class="n">further</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="n">about</span>
+<span class="n">the</span><span class="w"> </span><span class="n">usage</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="s">&#39;command&#39;</span><span class="n">.</span>
+
+<span class="n">Options</span><span class="w"> </span><span class="o">--</span><span class="n">arch</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">environ</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">init</span><span class="o">-</span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="n">file</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="o">--</span><span class="n">vanilla</span>
+<span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">placed</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">CMD</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">apply</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">processes</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="s">&#39;command&#39;</span>
+</pre></div>
+</div>
+<p>Report bugs at &lt;<a class="reference external" href="https://bugs.R-project.org">https://bugs.R-project.org</a>&gt;.</p>
+</section>
+<section id="quitting-r">
+<span id="exitr"></span><h2>Quitting R<a class="headerlink" href="#quitting-r" title="Link to this heading"></a></h2>
+<blockquote>
+<div><p>You can use <code class="docutils literal notranslate"><span class="pre">quit()</span></code> or <code class="docutils literal notranslate"><span class="pre">q()</span></code>.</p>
+</div></blockquote>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">q</span><span class="p">()</span>
+<span class="n">Save</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="n">image</span><span class="o">?</span><span class="w"> </span><span class="p">[</span><span class="n">y</span><span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">c</span><span class="p">]</span><span class="o">:</span><span class="w">       </span><span class="c1"># possibility of saving info for next session</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">q</span><span class="p">(</span><span class="n">save</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">)</span><span class="w">                       </span><span class="c1"># finish R without any question</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">Ctrl</span><span class="o">-</span><span class="n">D</span><span class="w">                             </span><span class="c1"># key combination equivalent to quit()</span>
+</pre></div>
+</div>
+<p>Using parenthesis in <strong class="command">quit()</strong> informs R that the command refers to a function and not to a variable.</p>
+</section>
+<section id="help-in-r">
+<span id="helpr"></span><h2>Help in R<a class="headerlink" href="#help-in-r" title="Link to this heading"></a></h2>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">help.start</span><span class="p">()</span><span class="w">                       </span><span class="c1"># general help displayed in a web browser</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">help</span><span class="p">(</span><span class="s">&quot;pp&quot;</span><span class="p">)</span><span class="w">                         </span><span class="c1"># help on function &quot;pp&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="o">?</span><span class="n">pp</span><span class="w">                                </span><span class="c1"># help on function &quot;pp&quot; (you know the exact name)</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">help.search</span><span class="p">(</span><span class="s">&quot;pp&quot;</span><span class="p">)</span><span class="w">                  </span><span class="c1"># search for instances of the string &quot;pp&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="o">??</span><span class="n">pp</span><span class="w">                               </span><span class="c1"># fuzzy search for instances of the string &quot;pp&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">apropos</span><span class="p">(</span><span class="s">&quot;pp&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="o">=</span><span class="s">&quot;function&quot;</span><span class="p">)</span><span class="w">     </span><span class="c1"># list available functions with &quot;pp&quot; in their names</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">example</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span><span class="w">                     </span><span class="c1"># run the R code from the *Examples* part of R&#39;s</span>
+<span class="w">                                     </span><span class="c1"># online help on topic; try for example example(plot)</span>
+</pre></div>
+</div>
+<p><kbd class="kbd docutils literal notranslate">Tab</kbd> key can be used to complete the commands:</p>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">Sys.</span><span class="o">&lt;</span><span class="n">Tab</span><span class="o">&gt;&lt;</span><span class="n">Tab</span><span class="o">&gt;</span><span class="w">     </span><span class="c1"># pressing &lt;Tab&gt; twice (after typing &#39;Sys.&#39;) to show</span>
+<span class="w">                     </span><span class="c1"># available Sys options</span>
+<span class="n">Sys.chmod</span><span class="w">        </span><span class="n">Sys.glob</span><span class="w">         </span><span class="n">Sys.setFileTime</span><span class="w">  </span><span class="n">Sys.umask</span>
+<span class="n">Sys.Date</span><span class="w">         </span><span class="n">Sys.info</span><span class="w">         </span><span class="n">Sys.setlocale</span><span class="w">    </span><span class="n">Sys.unsetenv</span>
+<span class="n">Sys.getenv</span><span class="w">       </span><span class="n">Sys.localeconv</span><span class="w">   </span><span class="n">Sys.sleep</span><span class="w">        </span><span class="n">Sys.which</span>
+<span class="n">Sys.getlocale</span><span class="w">    </span><span class="n">Sys.readlink</span><span class="w">     </span><span class="n">Sys.time</span>
+<span class="n">Sys.getpid</span><span class="w">       </span><span class="n">Sys.setenv</span><span class="w">       </span><span class="n">Sys.timezone</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">Sys.Date</span><span class="p">()</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;2030-01-01&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="other-useful-commands">
+<span id="usefulcomms"></span><h2>Other useful commands<a class="headerlink" href="#other-useful-commands" title="Link to this heading"></a></h2>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">R.version.string</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;R version 4.5.1 (2025-06-13)&quot;</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">capabilities</span><span class="p">()</span>
+<span class="w">     </span><span class="n">jpeg</span><span class="w">         </span><span class="n">png</span><span class="w">        </span><span class="n">tiff</span><span class="w">       </span><span class="n">tcltk</span><span class="w">         </span><span class="n">X11</span><span class="w">        </span><span class="n">aqua</span>
+<span class="w">     </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span>
+<span class="w"> </span><span class="n">http</span><span class="o">/</span><span class="n">ftp</span><span class="w">     </span><span class="n">sockets</span><span class="w">      </span><span class="n">libxml</span><span class="w">        </span><span class="n">fifo</span><span class="w">      </span><span class="n">cledit</span><span class="w">       </span><span class="n">iconv</span>
+<span class="w">     </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">       </span><span class="kc">FALSE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span>
+<span class="w">      </span><span class="n">NLS</span><span class="w">       </span><span class="n">Rprof</span><span class="w">     </span><span class="n">profmem</span><span class="w">       </span><span class="n">cairo</span><span class="w">         </span><span class="n">ICU</span><span class="w"> </span><span class="n">long.double</span>
+<span class="w">     </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">        </span><span class="kc">TRUE</span><span class="w">       </span><span class="kc">FALSE</span>
+<span class="w">  </span><span class="n">libcurl</span>
+<span class="w">     </span><span class="kc">TRUE</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">citation</span><span class="p">()</span>
+<span class="n">To</span><span class="w"> </span><span class="n">cite</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">publications</span><span class="w"> </span><span class="n">use</span><span class="o">:</span>
+
+<span class="w">  </span><span class="n">R</span><span class="w"> </span><span class="n">Core</span><span class="w"> </span><span class="nf">Team </span><span class="p">(</span><span class="m">2025</span><span class="p">)</span><span class="n">.</span><span class="w"> </span>_<span class="n">R</span><span class="o">:</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">Language</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">Environment</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">Statistical</span>
+<span class="w">  </span><span class="n">Computing_.</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">Foundation</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">Statistical</span><span class="w"> </span><span class="n">Computing</span><span class="p">,</span><span class="w"> </span><span class="n">Vienna</span><span class="p">,</span><span class="w"> </span><span class="n">Austria.</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">https</span><span class="o">://</span><span class="n">www.R</span><span class="o">-</span><span class="n">project.org</span><span class="o">/&gt;</span><span class="n">.</span>
+
+<span class="n">A</span><span class="w"> </span><span class="n">BibTeX</span><span class="w"> </span><span class="n">entry</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">LaTeX</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="n">is</span>
+
+<span class="w">  </span><span class="o">@</span><span class="n">Manual</span><span class="p">{,</span>
+<span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">R</span><span class="o">:</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">Language</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">Environment</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">Statistical</span><span class="w"> </span><span class="n">Computing</span><span class="p">},</span>
+<span class="w">    </span><span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="n">R</span><span class="w"> </span><span class="n">Core</span><span class="w"> </span><span class="n">Team</span><span class="p">}},</span>
+<span class="w">    </span><span class="n">organization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">R</span><span class="w"> </span><span class="n">Foundation</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">Statistical</span><span class="w"> </span><span class="n">Computing</span><span class="p">},</span>
+<span class="w">    </span><span class="n">address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">Vienna</span><span class="p">,</span><span class="w"> </span><span class="n">Austria</span><span class="p">},</span>
+<span class="w">    </span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="m">2025</span><span class="p">},</span>
+<span class="w">    </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">https</span><span class="o">://</span><span class="n">www.R</span><span class="o">-</span><span class="n">project.org</span><span class="o">/</span><span class="p">},</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="n">We</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">invested</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">lot</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">effort</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">creating</span><span class="w"> </span><span class="n">R</span><span class="p">,</span><span class="w"> </span><span class="n">please</span><span class="w"> </span><span class="n">cite</span><span class="w"> </span><span class="n">it</span>
+<span class="n">when</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">analysis.</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">also</span><span class="w"> </span>‘<span class="nf">citation</span><span class="p">(</span><span class="s">&quot;pkgname&quot;</span><span class="p">)</span>’<span class="w"> </span><span class="n">for</span>
+<span class="n">citing</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">packages.</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">R.home</span><span class="p">()</span><span class="w">                           </span><span class="c1"># return the R &#39;home&#39; directory</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;/usr/lib64/R&quot;</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">getwd</span><span class="p">()</span><span class="w">                            </span><span class="c1"># return the working directory</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;/home/user/R&quot;</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">setwd</span><span class="p">(</span><span class="s">&quot;/home/user/newRdir&quot;</span><span class="p">)</span><span class="w">        </span><span class="c1"># set new working directory</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">dir</span><span class="p">()</span><span class="w">                              </span><span class="c1"># show content of current directory</span>
+<span class="kc">...</span><span class="w">                                  </span><span class="c1"># (different from &#39;ls()&#39; command</span>
+<span class="kc">...</span><span class="w">                                  </span><span class="c1"># which lists objects in current workspace)</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">history</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w">                         </span><span class="c1"># display the last &#39;n&#39; commands (default = 25)</span>
+<span class="kc">...</span>
+<span class="kc">...</span><span class="w">                                  </span><span class="c1"># (press &quot;q&quot; to EXIT)</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">source</span><span class="p">(</span><span class="s">&quot;filename.R&quot;</span><span class="p">)</span><span class="w">               </span><span class="c1"># execute commands in the filename.R script</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">sink</span><span class="p">(</span><span class="s">&quot;register.txt&quot;</span><span class="p">)</span><span class="w">               </span><span class="c1"># divert R output to an external file</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">sink</span><span class="p">()</span><span class="w">                             </span><span class="c1"># stop sink-ing (results return to console)</span>
+</pre></div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">R for research in Astronomy</p>
+<p>R is a powerful programming language and environment for statistical
+computing and data analysis that has become increasingly important in modern
+astrophysics. However, <strong>when you first install R, you gain access to only
+its base functionality</strong>, which includes fundamental statistical and
+graphical capabilities. The true strength of R lies in its extensive
+ecosystem of additional packages—specialized collections of functions, data,
+and documentation created by the R community. These packages extend R’s
+capabilities far beyond its default installation, covering virtually every
+area of astronomical data analysis and computational astrophysics. From
+handling FITS files and astronomical catalogs with <code class="docutils literal notranslate"><span class="pre">FITSio</span></code> and
+<code class="docutils literal notranslate"><span class="pre">astrodatR</span></code>, to performing sophisticated time series analysis of variable
+stars and exoplanet transits with <code class="docutils literal notranslate"><span class="pre">astroTS</span></code>, to creating
+publication-quality plots and sky maps with <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> and <code class="docutils literal notranslate"><span class="pre">mapproj</span></code>, the
+availability of thousands of well-documented packages on repositories like
+<a class="reference external" href="https://cran.r-project.org/">CRAN (Comprehensive R Archive Network)</a>
+makes R an incredibly versatile tool for astrophysical research. Learning
+how to discover, install, and use these packages effectively is therefore a
+fundamental skill that will enable you to tackle everything from photometric
+data reduction and spectral analysis to cosmological simulations and survey
+data mining, transforming R from a basic statistical calculator into a
+comprehensive platform for astronomical research.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">A first glipmse of R in action</p>
+<p>Try the following code:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># load a specific data set</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">data</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
+
+<span class="c1"># get info about the data set</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="o">?</span><span class="n">cars</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># show data</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">cars</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># display the structure of the data object</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot data</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># fit a linear model</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">linear_model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="w"> </span><span class="n">dist</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">cars</span><span class="w"> </span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># display summary of the fitting result</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">summary</span><span class="p">(</span><span class="n">linear_model</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># display model coefficients</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">coef</span><span class="p">(</span><span class="n">linear_model</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot residuals against speed</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="w"> </span><span class="nf">resid</span><span class="p">(</span><span class="n">linear_model</span><span class="p">)</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">cars</span><span class="w"> </span><span class="p">)</span>
+
+<span class="c1"># Note: plot() is a generic function: it acts as a dispatcher that</span>
+<span class="c1"># examines the class of the object you pass to it. R looks for a</span>
+<span class="c1"># specific method plot.classname().</span>
+<span class="c1"># In this case: graphics:::plot.data.frame(cars)</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Rintro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dataStruct.html" class="btn btn-neutral float-right" title="Data structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2026, M.T. Ceballos (IFCA), N. Cardiel (UCM).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

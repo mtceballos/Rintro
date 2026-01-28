@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Reading and Writting &mdash; Rintro 10.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/default.css?v=216104a7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=335988e4"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=2e8ad693"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Graphs" href="graphs.html" />
+    <link rel="prev" title="Control Structures" href="controlStructs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Rintro
+              <img src="_static/Rlogo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Rintro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generalChars.html">Main features of R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataStruct.html">Data structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basicOps.html">Basic Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlStructs.html">Control Structures</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Reading and Writting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ascii-data-files">ASCII data files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#r-example-data">R Example Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="graphs.html">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statisticalTreatment.html">Statistical Treatment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rstudio.html">RStudio: an integrated environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography and References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rintro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Reading and Writting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dataReading.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-reading-and-writting">
+<h1>Data Reading and Writting<a class="headerlink" href="#data-reading-and-writting" title="Link to this heading"></a></h1>
+<p>You can import data in R in many different formats!</p>
+<a class="reference internal image-reference" href="_images/Rimport.png"><img alt="_images/Rimport.png" class="align-center" height="311" src="_images/Rimport.png" width="413" />
+</a>
+<section id="ascii-data-files">
+<span id="fromascii"></span><h2>ASCII data files<a class="headerlink" href="#ascii-data-files" title="Link to this heading"></a></h2>
+<p>The main functions used in R to import data from ASCII files are <code class="docutils literal notranslate"><span class="pre">read.table</span></code>
+and <code class="docutils literal notranslate"><span class="pre">read.csv</span></code> to read data in a tabular form, and <code class="docutils literal notranslate"><span class="pre">readLines</span></code> to read
+lines from a text file. The only difference between <code class="docutils literal notranslate"><span class="pre">read.table</span></code> and
+<code class="docutils literal notranslate"><span class="pre">read.csv</span></code> is that in the later the default separator is a comma.  The
+analogous functions to write data to a text file are called <code class="docutils literal notranslate"><span class="pre">write.table</span></code>,
+<code class="docutils literal notranslate"><span class="pre">write.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">writeLines</span></code>,…</p>
+<p>Let’s have a file named <a class="reference download internal" download="" href="_downloads/d2a2ab9f708a260689baa199d1df9a75/galaxies.dat"><code class="xref download docutils literal notranslate"><span class="pre">galaxies.dat</span></code></a>, which contains:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">GALAXY morf T_RC3 U-B B-V</span>
+<span class="na">NGC1357 Sab 2    0.25 0.87</span>
+<span class="na">NGC1832 Sb  4   -0.01 0.63</span>
+<span class="na">NGC2276 Sc  5   -0.09 0.52</span>
+<span class="na">NGC3245 S0 -2    0.47 0.91</span>
+<span class="na">NGC3379 E  -5    0.53 0.96</span>
+<span class="na">NGC1234 Sab 3   -0.56 0.84</span>
+<span class="na">NGC5678 E  -4    0.45 0.92</span>
+</pre></div>
+</div>
+<p>This file can be read as follows:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">gal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;galaxies.dat&quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where the instruction <code class="docutils literal notranslate"><span class="pre">header=TRUE</span></code> specifies that the first line in the file
+does not contain data but it is a label identifying the contents of every
+column.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">gal</span><span class="w">                                </span><span class="c1"># show content of data file</span>
+<span class="w">   </span><span class="n">GALAXY</span><span class="w"> </span><span class="n">morf</span><span class="w"> </span><span class="n">T_RC3</span><span class="w">   </span><span class="n">U.B</span><span class="w">  </span><span class="n">B.V</span><span class="w">      </span><span class="c1"># &#39;U-B&#39; and &#39;B-V&#39; labels have changed!</span>
+<span class="m">1</span><span class="w"> </span><span class="n">NGC1357</span><span class="w">  </span><span class="n">Sab</span><span class="w">     </span><span class="m">2</span><span class="w">  </span><span class="m">0.25</span><span class="w"> </span><span class="m">0.87</span>
+<span class="m">2</span><span class="w"> </span><span class="n">NGC1832</span><span class="w">   </span><span class="n">Sb</span><span class="w">     </span><span class="m">4</span><span class="w"> </span><span class="m">-0.01</span><span class="w"> </span><span class="m">0.63</span>
+<span class="m">3</span><span class="w"> </span><span class="n">NGC2276</span><span class="w">   </span><span class="n">Sc</span><span class="w">     </span><span class="m">5</span><span class="w"> </span><span class="m">-0.09</span><span class="w"> </span><span class="m">0.52</span>
+<span class="m">4</span><span class="w"> </span><span class="n">NGC3245</span><span class="w">   </span><span class="n">S0</span><span class="w">    </span><span class="m">-2</span><span class="w">  </span><span class="m">0.47</span><span class="w"> </span><span class="m">0.91</span>
+<span class="m">5</span><span class="w"> </span><span class="n">NGC3379</span><span class="w">    </span><span class="n">E</span><span class="w">    </span><span class="m">-5</span><span class="w">  </span><span class="m">0.53</span><span class="w"> </span><span class="m">0.96</span>
+<span class="m">6</span><span class="w"> </span><span class="n">NGC1234</span><span class="w">  </span><span class="n">Sab</span><span class="w">     </span><span class="m">3</span><span class="w"> </span><span class="m">-0.56</span><span class="w"> </span><span class="m">0.84</span>
+<span class="m">7</span><span class="w"> </span><span class="n">NGC5678</span><span class="w">    </span><span class="n">E</span><span class="w">    </span><span class="m">-4</span><span class="w">  </span><span class="m">0.45</span><span class="w"> </span><span class="m">0.92</span>
+</pre></div>
+</div>
+<p>The data file is read as a data frame (i.e. a list):</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">class</span><span class="p">(</span><span class="n">gal</span><span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;data.frame&quot;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">gal</span><span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;GALAXY&quot;</span><span class="w"> </span><span class="s">&quot;morf&quot;</span><span class="w">   </span><span class="s">&quot;T_RC3&quot;</span><span class="w">  </span><span class="s">&quot;U.B&quot;</span><span class="w">    </span><span class="s">&quot;B.V&quot;</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="n">gal</span><span class="o">$</span><span class="n">morf</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Sab&quot;</span><span class="w"> </span><span class="s">&quot;Sb&quot;</span><span class="w">  </span><span class="s">&quot;Sc&quot;</span><span class="w">  </span><span class="s">&quot;S0&quot;</span><span class="w">  </span><span class="s">&quot;E&quot;</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">tapply</span><span class="p">(</span><span class="n">gal</span><span class="o">$</span><span class="n">U.B</span><span class="p">,</span><span class="w"> </span><span class="n">gal</span><span class="o">$</span><span class="n">morf</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p">)</span><span class="w">    </span><span class="c1"># calculate mean colours for every morph. type</span>
+<span class="w">    </span><span class="n">E</span><span class="w">     </span><span class="n">S0</span><span class="w">    </span><span class="n">Sab</span><span class="w">     </span><span class="n">Sb</span><span class="w">     </span><span class="n">Sc</span>
+<span class="m">0.490</span><span class="w">  </span><span class="m">0.470</span><span class="w"> </span><span class="m">-0.155</span><span class="w"> </span><span class="m">-0.010</span><span class="w"> </span><span class="m">-0.090</span>
+</pre></div>
+</div>
+<p>The names of the different fields can be directly accessed (without lists name
+specification) using their names:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">attach</span><span class="p">(</span><span class="n">gal</span><span class="p">)</span><span class="w">                        </span><span class="c1"># direct access to the list elements</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">morf</span><span class="w">                               </span><span class="c1">#   (it is no longer necessary to use gal$morf,...)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="n">Sab</span><span class="w"> </span><span class="n">Sb</span><span class="w">  </span><span class="n">Sc</span><span class="w">  </span><span class="n">S0</span><span class="w">  </span><span class="n">E</span>
+<span class="n">Levels</span><span class="o">:</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="n">S0</span><span class="w"> </span><span class="n">Sab</span><span class="w"> </span><span class="n">Sb</span><span class="w"> </span><span class="n">Sc</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">detach</span><span class="p">(</span><span class="n">gal</span><span class="p">)</span><span class="w">                        </span><span class="c1"># remove direct access</span>
+</pre></div>
+</div>
+<p>If the data file only contains numbers, information can also be read and
+assigned to a matrix instead of storing it in a data frame. As an example, if
+we want to read the file <a class="reference download internal" download="" href="_downloads/bf10b7e2fc3bcec0e307fd323f5b9ce3/numbers.dat"><code class="xref download docutils literal notranslate"><span class="pre">numbers.dat</span></code></a> with 3 columns:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="nf">scan</span><span class="p">(</span><span class="s">&quot;numbers.dat&quot;</span><span class="p">,</span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">Read</span><span class="w"> </span><span class="m">36</span><span class="w"> </span><span class="n">items</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">a</span>
+<span class="w">      </span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w">  </span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">3</span><span class="p">]</span>
+<span class="w"> </span><span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">    </span><span class="m">2</span><span class="w">  </span><span class="m">0.25</span><span class="w"> </span><span class="m">0.87</span>
+<span class="w"> </span><span class="p">[</span><span class="m">2</span><span class="p">,]</span><span class="w">    </span><span class="m">4</span><span class="w"> </span><span class="m">-0.01</span><span class="w"> </span><span class="m">0.63</span>
+<span class="w"> </span><span class="p">[</span><span class="m">3</span><span class="p">,]</span><span class="w">    </span><span class="m">5</span><span class="w"> </span><span class="m">-0.09</span><span class="w"> </span><span class="m">0.52</span>
+<span class="w"> </span><span class="p">[</span><span class="m">4</span><span class="p">,]</span><span class="w">   </span><span class="m">-2</span><span class="w">  </span><span class="m">0.47</span><span class="w"> </span><span class="m">0.91</span>
+<span class="w"> </span><span class="p">[</span><span class="m">5</span><span class="p">,]</span><span class="w">   </span><span class="m">-5</span><span class="w">  </span><span class="m">0.53</span><span class="w"> </span><span class="m">0.96</span>
+<span class="w"> </span><span class="p">[</span><span class="m">6</span><span class="p">,]</span><span class="w">    </span><span class="m">1</span><span class="w">  </span><span class="m">0.45</span><span class="w"> </span><span class="m">0.92</span>
+<span class="w"> </span><span class="p">[</span><span class="m">7</span><span class="p">,]</span><span class="w">    </span><span class="m">3</span><span class="w">  </span><span class="m">0.20</span><span class="w"> </span><span class="m">0.73</span>
+<span class="w"> </span><span class="p">[</span><span class="m">8</span><span class="p">,]</span><span class="w">   </span><span class="m">-3</span><span class="w">  </span><span class="m">0.51</span><span class="w"> </span><span class="m">0.94</span>
+<span class="w"> </span><span class="p">[</span><span class="m">9</span><span class="p">,]</span><span class="w">   </span><span class="m">-5</span><span class="w">  </span><span class="m">0.55</span><span class="w"> </span><span class="m">0.96</span>
+<span class="p">[</span><span class="m">10</span><span class="p">,]</span><span class="w">   </span><span class="m">10</span><span class="w"> </span><span class="m">-0.22</span><span class="w"> </span><span class="m">0.39</span>
+<span class="p">[</span><span class="m">11</span><span class="p">,]</span><span class="w">   </span><span class="m">-1</span><span class="w">  </span><span class="m">0.38</span><span class="w"> </span><span class="m">0.85</span>
+<span class="p">[</span><span class="m">12</span><span class="p">,]</span><span class="w">    </span><span class="m">5</span><span class="w"> </span><span class="m">-0.03</span><span class="w"> </span><span class="m">0.63</span>
+</pre></div>
+</div>
+<p>If the number of columns is not specified through <code class="docutils literal notranslate"><span class="pre">ncol</span></code>, all the elements are stored into a one dimensional array:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="nf">scan</span><span class="p">(</span><span class="s">&quot;numbers.dat&quot;</span><span class="p">,</span><span class="m">0</span><span class="p">))</span>
+<span class="n">Read</span><span class="w"> </span><span class="m">36</span><span class="w"> </span><span class="n">items</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">a1</span>
+<span class="w">       </span><span class="p">[,</span><span class="m">1</span><span class="p">]</span>
+<span class="w"> </span><span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">  </span><span class="m">2.00</span>
+<span class="w"> </span><span class="p">[</span><span class="m">2</span><span class="p">,]</span><span class="w">  </span><span class="m">0.25</span>
+<span class="w"> </span><span class="p">[</span><span class="m">3</span><span class="p">,]</span><span class="w">  </span><span class="m">0.87</span>
+<span class="w"> </span><span class="p">[</span><span class="m">4</span><span class="p">,]</span><span class="w">  </span><span class="m">4.00</span>
+<span class="w"> </span><span class="p">[</span><span class="m">5</span><span class="p">,]</span><span class="w"> </span><span class="m">-0.01</span>
+<span class="w"> </span><span class="p">[</span><span class="m">6</span><span class="p">,]</span><span class="w">  </span><span class="m">0.63</span>
+<span class="w"> </span><span class="p">[</span><span class="m">7</span><span class="p">,]</span><span class="w">  </span><span class="m">5.00</span>
+<span class="w"> </span><span class="p">[</span><span class="m">8</span><span class="p">,]</span><span class="w"> </span><span class="m">-0.09</span>
+<span class="w"> </span><span class="p">[</span><span class="m">9</span><span class="p">,]</span><span class="w">  </span><span class="m">0.52</span>
+<span class="w">  </span><span class="n">.</span><span class="w">     </span><span class="n">.</span>
+<span class="w">  </span><span class="n">.</span><span class="w">     </span><span class="n">.</span>
+<span class="w">  </span><span class="n">.</span><span class="w">     </span><span class="n">.</span>
+<span class="p">[</span><span class="m">28</span><span class="p">,]</span><span class="w"> </span><span class="m">10.00</span>
+<span class="p">[</span><span class="m">29</span><span class="p">,]</span><span class="w"> </span><span class="m">-0.22</span>
+<span class="p">[</span><span class="m">30</span><span class="p">,]</span><span class="w">  </span><span class="m">0.39</span>
+<span class="p">[</span><span class="m">31</span><span class="p">,]</span><span class="w"> </span><span class="m">-1.00</span>
+<span class="p">[</span><span class="m">32</span><span class="p">,]</span><span class="w">  </span><span class="m">0.38</span>
+<span class="p">[</span><span class="m">33</span><span class="p">,]</span><span class="w">  </span><span class="m">0.85</span>
+<span class="p">[</span><span class="m">34</span><span class="p">,]</span><span class="w">  </span><span class="m">5.00</span>
+<span class="p">[</span><span class="m">35</span><span class="p">,]</span><span class="w"> </span><span class="m">-0.03</span>
+<span class="p">[</span><span class="m">36</span><span class="p">,]</span><span class="w">  </span><span class="m">0.63</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">byrow=TRUE</span></code> is omitted the element assignment does not preserve the
+columns information:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">a2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">matrix</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="nf">scan</span><span class="p">(</span><span class="s">&quot;numbers.dat&quot;</span><span class="p">,</span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="o">=</span><span class="m">3</span><span class="p">)</span>
+<span class="n">Read</span><span class="w"> </span><span class="m">36</span><span class="w"> </span><span class="n">items</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">a2</span>
+<span class="w">       </span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w">  </span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w">  </span><span class="p">[,</span><span class="m">3</span><span class="p">]</span>
+<span class="w"> </span><span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">  </span><span class="m">2.00</span><span class="w"> </span><span class="m">-5.00</span><span class="w"> </span><span class="m">-5.00</span>
+<span class="w"> </span><span class="p">[</span><span class="m">2</span><span class="p">,]</span><span class="w">  </span><span class="m">0.25</span><span class="w">  </span><span class="m">0.53</span><span class="w">  </span><span class="m">0.55</span>
+<span class="w"> </span><span class="p">[</span><span class="m">3</span><span class="p">,]</span><span class="w">  </span><span class="m">0.87</span><span class="w">  </span><span class="m">0.96</span><span class="w">  </span><span class="m">0.96</span>
+<span class="w"> </span><span class="p">[</span><span class="m">4</span><span class="p">,]</span><span class="w">  </span><span class="m">4.00</span><span class="w">  </span><span class="m">1.00</span><span class="w"> </span><span class="m">10.00</span>
+<span class="w"> </span><span class="p">[</span><span class="m">5</span><span class="p">,]</span><span class="w"> </span><span class="m">-0.01</span><span class="w">  </span><span class="m">0.45</span><span class="w"> </span><span class="m">-0.22</span>
+<span class="w"> </span><span class="p">[</span><span class="m">6</span><span class="p">,]</span><span class="w">  </span><span class="m">0.63</span><span class="w">  </span><span class="m">0.92</span><span class="w">  </span><span class="m">0.39</span>
+<span class="w"> </span><span class="p">[</span><span class="m">7</span><span class="p">,]</span><span class="w">  </span><span class="m">5.00</span><span class="w">  </span><span class="m">3.00</span><span class="w"> </span><span class="m">-1.00</span>
+<span class="w"> </span><span class="p">[</span><span class="m">8</span><span class="p">,]</span><span class="w"> </span><span class="m">-0.09</span><span class="w">  </span><span class="m">0.20</span><span class="w">  </span><span class="m">0.38</span>
+<span class="w"> </span><span class="p">[</span><span class="m">9</span><span class="p">,]</span><span class="w">  </span><span class="m">0.52</span><span class="w">  </span><span class="m">0.73</span><span class="w">  </span><span class="m">0.85</span>
+<span class="p">[</span><span class="m">10</span><span class="p">,]</span><span class="w"> </span><span class="m">-2.00</span><span class="w"> </span><span class="m">-3.00</span><span class="w">  </span><span class="m">5.00</span>
+<span class="p">[</span><span class="m">11</span><span class="p">,]</span><span class="w">  </span><span class="m">0.47</span><span class="w">  </span><span class="m">0.51</span><span class="w"> </span><span class="m">-0.03</span>
+<span class="p">[</span><span class="m">12</span><span class="p">,]</span><span class="w">  </span><span class="m">0.91</span><span class="w">  </span><span class="m">0.94</span><span class="w">  </span><span class="m">0.63</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Reading large datafiles requires a careful setting of the read.table parameters. Specifying the “colClasses” argument can make the data reading twice as fast while setting the “nrows” argument helps with the memory usage.</p>
+</div>
+</section>
+<section id="r-example-data">
+<span id="exampledata"></span><h2>R Example Data<a class="headerlink" href="#r-example-data" title="Link to this heading"></a></h2>
+<p>R contains a lot of example data. All the functions and data blocks are stored in packages.</p>
+<p>The list of packages currently installed in R can be seen with:</p>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">library</span><span class="p">()</span>
+<span class="n">Packages</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">library</span><span class="w"> </span>‘<span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">R</span><span class="o">/</span><span class="n">x86_64</span><span class="o">-</span><span class="n">redhat</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="o">-</span><span class="n">library</span><span class="o">/</span><span class="m">3.0</span>’<span class="o">:</span>
+
+<span class="n">FITSio</span><span class="w">                  </span><span class="nf">FITS </span><span class="p">(</span><span class="n">Flexible</span><span class="w"> </span><span class="n">Image</span><span class="w"> </span><span class="n">Transport</span><span class="w"> </span><span class="n">System</span><span class="p">)</span><span class="w"> </span><span class="n">utilities</span>
+<span class="n">manipulate</span><span class="w">              </span><span class="n">Interactive</span><span class="w"> </span><span class="n">Plots</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">RStudio</span>
+<span class="n">plyr</span><span class="w">                    </span><span class="n">Tools</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">splitting</span><span class="p">,</span><span class="w"> </span><span class="n">applying</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">combining</span><span class="w">  </span><span class="n">data</span>
+<span class="n">rstudio</span><span class="w">                 </span><span class="n">Tools</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">Utilities</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">RStudio</span>
+
+<span class="n">Packages</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">library</span><span class="w"> </span>‘<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">R</span><span class="o">/</span><span class="n">library</span>’<span class="o">:</span>
+
+<span class="n">base</span><span class="w">                    </span><span class="n">The</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="n">Package</span>
+<span class="n">bitops</span><span class="w">                  </span><span class="n">Functions</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">Bitwise</span><span class="w"> </span><span class="n">operations</span>
+<span class="n">boot</span><span class="w">                    </span><span class="n">Bootstrap</span><span class="w"> </span><span class="nf">Functions </span><span class="p">(</span><span class="n">originally</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">Angelo</span><span class="w"> </span><span class="n">Canty</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">S</span><span class="p">)</span>
+<span class="n">class</span><span class="w">                   </span><span class="n">Functions</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">Classification</span>
+<span class="kc">...</span>
+</pre></div>
+</div>
+<p>To gather information about a specific package:</p>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">library</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="n">splines</span><span class="p">)</span><span class="w">              </span><span class="c1"># show help about the &#39;splines&#39; package</span>
+
+<span class="w">              </span><span class="n">Information</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">package</span><span class="w"> </span>‘<span class="n">splines</span>’
+
+<span class="n">Description</span><span class="o">:</span>
+
+<span class="n">Package</span><span class="o">:</span><span class="w">       </span><span class="n">splines</span>
+<span class="n">Version</span><span class="o">:</span><span class="w">       </span><span class="m">3.0</span><span class="n">.</span><span class="m">1</span>
+<span class="n">Priority</span><span class="o">:</span><span class="w">      </span><span class="n">base</span>
+<span class="n">Imports</span><span class="o">:</span><span class="w">       </span><span class="n">graphics</span><span class="p">,</span><span class="w"> </span><span class="n">stats</span>
+<span class="n">Title</span><span class="o">:</span><span class="w">         </span><span class="n">Regression</span><span class="w"> </span><span class="n">Spline</span><span class="w"> </span><span class="n">Functions</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">Classes</span>
+<span class="n">Author</span><span class="o">:</span><span class="w">        </span><span class="n">Douglas</span><span class="w"> </span><span class="n">M.</span><span class="w"> </span><span class="n">Bates</span><span class="w"> </span><span class="o">&lt;</span><span class="n">bates</span><span class="o">@</span><span class="n">stat.wisc.edu</span><span class="o">&gt;</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">William</span><span class="w"> </span><span class="n">N.</span>
+<span class="w">               </span><span class="n">Venables</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Bill.Venables</span><span class="o">@</span><span class="n">csiro.au</span><span class="o">&gt;</span>
+<span class="n">Maintainer</span><span class="o">:</span><span class="w">    </span><span class="n">R</span><span class="w"> </span><span class="n">Core</span><span class="w"> </span><span class="n">Team</span><span class="w"> </span><span class="o">&lt;</span><span class="n">R</span><span class="o">-</span><span class="n">core</span><span class="o">@</span><span class="n">r</span><span class="o">-</span><span class="n">project.org</span><span class="o">&gt;</span>
+<span class="n">Description</span><span class="o">:</span><span class="w">   </span><span class="n">Regression</span><span class="w"> </span><span class="n">spline</span><span class="w"> </span><span class="n">functions</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">classes</span>
+<span class="kc">...</span>
+</pre></div>
+</div>
+<p>And to load a package and be able to use its functionality:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">library</span><span class="p">(</span><span class="n">splines</span><span class="p">)</span><span class="w">                   </span><span class="c1"># load &#39;splines&#39; package</span>
+</pre></div>
+</div>
+<p>We can check the data lists that are currently available:</p>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">data</span><span class="p">()</span>
+<span class="n">Data</span><span class="w"> </span><span class="n">sets</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">package</span><span class="w"> </span>‘<span class="n">datasets</span>’<span class="o">:</span>
+
+<span class="n">AirPassengers</span><span class="w">           </span><span class="n">Monthly</span><span class="w"> </span><span class="n">Airline</span><span class="w"> </span><span class="n">Passenger</span><span class="w"> </span><span class="n">Numbers</span><span class="w"> </span><span class="m">1949-1960</span>
+<span class="n">BJsales</span><span class="w">                 </span><span class="n">Sales</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">Leading</span><span class="w"> </span><span class="n">Indicator</span>
+<span class="nf">BJsales.lead </span><span class="p">(</span><span class="n">BJsales</span><span class="p">)</span><span class="w">  </span><span class="n">Sales</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">Leading</span><span class="w"> </span><span class="n">Indicator</span>
+<span class="n">BOD</span><span class="w">                     </span><span class="n">Biochemical</span><span class="w"> </span><span class="n">Oxygen</span><span class="w"> </span><span class="n">Demand</span>
+<span class="n">CO2</span><span class="w">                     </span><span class="n">Carbon</span><span class="w"> </span><span class="n">Dioxide</span><span class="w"> </span><span class="n">Uptake</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">Grass</span><span class="w"> </span><span class="n">Plants</span>
+<span class="n">ChickWeight</span><span class="w">             </span><span class="n">Weight</span><span class="w"> </span><span class="n">versus</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">chicks</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">different</span><span class="w"> </span><span class="n">diets</span>
+<span class="n">DNase</span><span class="w">                   </span><span class="n">Elisa</span><span class="w"> </span><span class="n">assay</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">DNase</span>
+<span class="n">EuStockMarkets</span><span class="w">          </span><span class="n">Daily</span><span class="w"> </span><span class="n">Closing</span><span class="w"> </span><span class="n">Prices</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Major</span><span class="w"> </span><span class="n">European</span><span class="w"> </span><span class="n">Stock</span>
+<span class="kc">...</span>
+</pre></div>
+</div>
+<p>And those that are available in a given package:</p>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">data</span><span class="p">(</span><span class="n">package</span><span class="o">=</span><span class="s">&quot;cluster&quot;</span><span class="p">)</span><span class="w">            </span><span class="c1"># show data available through the package &#39;cluster&#39;</span>
+
+<span class="n">Data</span><span class="w"> </span><span class="n">sets</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">package</span><span class="w"> </span>‘<span class="n">cluster</span>’<span class="o">:</span>
+
+<span class="n">agriculture</span><span class="w">             </span><span class="n">European</span><span class="w"> </span><span class="n">Union</span><span class="w"> </span><span class="n">Agricultural</span><span class="w"> </span><span class="n">Workforces</span>
+<span class="n">animals</span><span class="w">                 </span><span class="n">Attributes</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Animals</span>
+<span class="n">chorSub</span><span class="w">                 </span><span class="n">Subset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">C</span><span class="o">-</span><span class="n">horizon</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Kola</span><span class="w"> </span><span class="n">Data</span>
+<span class="n">flower</span><span class="w">                  </span><span class="n">Flower</span><span class="w"> </span><span class="n">Characteristics</span>
+<span class="n">plantTraits</span><span class="w">             </span><span class="n">Plant</span><span class="w"> </span><span class="n">Species</span><span class="w"> </span><span class="n">Traits</span><span class="w"> </span><span class="n">Data</span>
+<span class="kc">...</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">data</span><span class="p">(</span><span class="n">animals</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="o">=</span><span class="s">&quot;cluster&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1"># load &#39;animals&#39; list from &#39;cluster&#39; package</span>
+</pre></div>
+</div>
+<p>One of the strongest points in R is that new packages are continuously being
+generated, including new functionalities.  To install a new package:</p>
+<div class="no-copybutton highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;car&quot;</span><span class="p">)</span><span class="w">            </span><span class="c1"># install &#39;car&#39; package</span>
+<span class="n">Installing</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="n">into</span><span class="w"> </span>‘<span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">ceballos</span><span class="o">/</span><span class="n">R</span><span class="o">/</span><span class="n">x86_64</span><span class="o">-</span><span class="n">redhat</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="o">-</span><span class="n">library</span><span class="o">/</span><span class="m">3.0</span>’
+<span class="kc">...</span>
+
+<span class="o">---</span><span class="w"> </span><span class="n">Please</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">CRAN</span><span class="w"> </span><span class="n">mirror</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">---</span><span class="w">  </span><span class="c1"># ask for a software mirror</span>
+</pre></div>
+</div>
+<p>Once installed we can use it:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">library</span><span class="p">(</span><span class="n">car</span><span class="p">)</span><span class="w">                       </span><span class="c1"># load in memory the functionality defined in &#39;car&#39;</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nf">data</span><span class="p">(</span><span class="n">package</span><span class="o">=</span><span class="s">&quot;cluster&quot;</span><span class="p">)</span>
+<span class="n">Data</span><span class="w"> </span><span class="n">sets</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">package</span><span class="w"> </span>’<span class="n">car</span>’<span class="o">:</span>
+
+<span class="n">AMSsurvey</span><span class="w">                    </span><span class="n">American</span><span class="w"> </span><span class="n">Math</span><span class="w"> </span><span class="n">Society</span><span class="w"> </span><span class="n">Survey</span><span class="w"> </span><span class="n">Data</span>
+<span class="n">Adler</span><span class="w">                        </span><span class="n">Experimenter</span><span class="w"> </span><span class="n">Expectations</span>
+<span class="kc">...</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="controlStructs.html" class="btn btn-neutral float-left" title="Control Structures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="graphs.html" class="btn btn-neutral float-right" title="Graphs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2013-2026, M.T. Ceballos (IFCA), N. Cardiel (UCM).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
