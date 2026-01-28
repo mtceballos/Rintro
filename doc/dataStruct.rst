@@ -10,6 +10,7 @@ Data structure
 .. role:: red
 .. role:: blue
 .. role:: tt
+.. role:: borange
 
 .. _obj:
 
@@ -1055,11 +1056,11 @@ Several R operators can be used to extract subsets (slices) from R objects:
 
 * **[[** can be used to extract a **single** element from a data frame or a 
   list. The class of the extracted element can be different from the original
-  object.
+  object. Can only select one element at a time.
 
 * **$** can be used to extract **named** elements from a data frame or a list.
 
-For *Numeric Vectors*:
+:borange:`For *Numeric Vectors*:`
 
 .. code-block:: r
 
@@ -1068,7 +1069,7 @@ For *Numeric Vectors*:
    > a					# show in screen
    [1]   1   4   9  16  25  36  49  64  81 100 121 144 169 196 225
    > a[3]				# access to the third value in the vector
-   [1] 9					#  (numeric index)	
+   [1] 9				#  (numeric index)	
    > a[3:5]				# access to a continuum slice of values
    [1]  9 16 25				#  (numeric index)
    > a[c(1,3,10)]			# access to a given sequence of values
@@ -1076,11 +1077,11 @@ For *Numeric Vectors*:
    > a[-1]                               # negative index remove values from vector
    [1]   4   9  16  25  36  49  64  81 100 121 144 169 196 225
    > a[c(-1,-3,-5,-7)]                   # remove several values (it is not possible
-   [1]   4  16  36  64  81 100 121 144 169 196 225   to mix positive and negative indices!)
+   [1]   4  16  36  64  81 100 121 144 169 196 225   # to mix positive and negative indices!)
    > a[a>100]				# access to a sequence based on a condition
    [1] 121 144 169 196 225		#  (logical index)
 
-For *Character Vectors*:
+:borange:`For *Character Vectors*:`
  
 .. code-block:: r
 
@@ -1097,7 +1098,7 @@ For *Character Vectors*:
    > a[gtC]
    [1] "D" "E"
   
-For *Matrices*, elements are accessed through two integer indices:
+:borange:`For *Matrices*, elements are accessed through two integer indices:`
 
 .. note:: The agreement to establish the indices order ``a[i,j]`` is the same than the one used in Math for the matrix coefficients a :sub:`ij`
 
@@ -1150,33 +1151,43 @@ auxiliary matrices:
    [3,]    0    6    9   12
   
   
-For *lists*:  
+:borange:`For *lists*:`
   
-
-The list components can be accessed using the three operators mentioned above (*[*, *[[* and *$*):
+The list components can be accessed using the three operators mentioned above
+(**[**, **[[** and **$**):
 
 .. code-block:: r
 
    > gal <- list(name="NGC3379", morf="E", colours=c(0.53,0.96))
        
-   > gal[3]				# access to the third element of the list
-   $colours                             #  (get back a list with one element called 'colours' 
-   [1] 0.53 0.96                        #   with the sequence '0.53,0.96')
-   > gal["colours"]			# single bracket + name (same as above)
+   > gal[3]			# access to the third element of the list
+   $colours                     #  (get back a list with one element called 'colours' 
+   [1] 0.53 0.96                #   with the sequence '0.53,0.96')
+   > gal["colours"]		# single bracket + name (same as above)
    $colours				
    [1] 0.53 0.96
+   > class(gal[3]); class(gal["colours"])       # double check
+   [1] "list"
+   [1] "list"
 
-   > gal[[3]]				# access to the third element of the list
-   [1] 0.53 0.96			#  (get back just the sequence)
-   > gal[["colours"]]			# double bracket + name (same as above)
+   > gal[[3]]			# access to the third element of the list
+   [1] 0.53 0.96		#  (get back just the sequence)
+   > gal[["colours"]]		# double bracket + name (same as above)
    [1] 0.53 0.96				
+   > class(gal[[3]]); class(gal[["colours"]])   # double check
+   [1] "numeric"
+   [1] "numeric"
    
-   > gal$colours			# element associated with the name 'colours'
-   [1] 0.53 0.96			#  (same as double bracket)
-   > gal$colours[1]			# first element of the sequence in the third element
+   > gal$colours		# element associated with the name 'colours'
+   [1] 0.53 0.96		#  (same as double bracket)
+   > gal$colours[1]		# first element of the sequence in the third element
    [1] 0.53
-   > gal$colours[2]			# second element of the sequence in the third element
+   > gal$colours[2]		# second element of the sequence in the third element
    [1] 0.96
+   > class(gal$colours)                         # double check
+   [1] "numeric"
+   > gal$colours == gal[[3]]    # same result
+   [1] TRUE TRUE
 
 To extract **multiple elements** of a list, single bracket is mandatory:
 
@@ -1191,7 +1202,8 @@ To extract **multiple elements** of a list, single bracket is mandatory:
    $morf
    [1] "E"
 
-For **computed** indices the *[[* and *[* operators can be used. The *$* operator can only be used with *literal* names:
+For **computed** indices the **[[** and **[** operators can be used. The **$**
+operator can only be used with *literal* names:
 
 .. code-block:: r
 
@@ -1234,7 +1246,7 @@ To **recursively** extract an element:
    $name
    [1] "NGC3379"
 
-Elements can be extracted using **partial matching** with the *[[* and *$*
+Elements can be extracted using **partial matching** with the **[[** and **$**
 operators:
 
 .. code-block:: r
