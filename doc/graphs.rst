@@ -109,7 +109,8 @@ Or a scatter plot:
 .. code-block:: r
 
    # read web file (fill=TRUE if some rows have missing values)
-   > hip <- read.table("HIP_star.dat", header=TRUE, fill=TRUE)
+   > hip <- read.table("https://raw.githubusercontent.com/mtceballos/Rintro/refs/heads/main/doc/HIP_star.dat", 
+   + header=TRUE, fill=TRUE)
     
    > names(hip)
    [1] "HIP"   "Vmag"  "RA"    "DE"    "Plx"   "pmRA"  "pmDE"  "e_Plx" "B.V"  	# show columns
