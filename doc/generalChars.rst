@@ -210,5 +210,83 @@ Other useful commands
    > sink("register.txt")               # divert R output to an external file 
     
    > sink()                             # stop sink-ing (results return to console)
-  
+
+
+.. admonition:: R for research in Astronomy
+   :class: dropdown
+
+   R is a powerful programming language and environment for statistical
+   computing and data analysis that has become increasingly important in modern
+   astrophysics. However, **when you first install R, you gain access to only
+   its base functionality**, which includes fundamental statistical and
+   graphical capabilities. The true strength of R lies in its extensive
+   ecosystem of additional packages—specialized collections of functions, data,
+   and documentation created by the R community. These packages extend R's
+   capabilities far beyond its default installation, covering virtually every
+   area of astronomical data analysis and computational astrophysics. From
+   handling FITS files and astronomical catalogs with ``FITSio`` and
+   ``astrodatR``, to performing sophisticated time series analysis of variable
+   stars and exoplanet transits with ``astroTS``, to creating
+   publication-quality plots and sky maps with ``ggplot2`` and ``mapproj``, the
+   availability of thousands of well-documented packages on repositories like
+   `CRAN (Comprehensive R Archive Network) <https://cran.r-project.org/>`_
+   makes R an incredibly versatile tool for astrophysical research. Learning
+   how to discover, install, and use these packages effectively is therefore a
+   fundamental skill that will enable you to tackle everything from photometric
+   data reduction and spectral analysis to cosmological simulations and survey
+   data mining, transforming R from a basic statistical calculator into a
+   comprehensive platform for astronomical research.
  
+.. admonition:: A first glipmse of R in action
+   :class: dropdown
+
+   Try the following code:
+
+   .. code-block:: r  
+
+      # load a specific data set
+      > data(cars)   
+
+      # get info about the data set
+      > ?cars
+
+   .. code-block:: r  
+
+      # show data
+      > cars
+
+   .. code-block:: r  
+
+      # display the structure of the data object
+      > str(cars)
+
+   .. code-block:: r  
+
+      # plot data
+      > plot(cars)
+
+   .. code-block:: r  
+
+      # fit a linear model
+      > linear_model <- lm( dist ~ speed , data=cars )
+
+   .. code-block:: r  
+
+      # display summary of the fitting result
+      > summary(linear_model)
+
+   .. code-block:: r  
+
+      # display model coefficients
+      > coef(linear_model)
+
+   .. code-block:: r  
+
+      # plot residuals against speed 
+      > plot( resid(linear_model) ~ speed , data=cars )
+
+      # Note: plot() is a generic function: it acts as a dispatcher that
+      # examines the class of the object you pass to it. R looks for a
+      # specific method plot.classname(). 
+      # In this case: graphics:::plot.data.frame(cars)
+
