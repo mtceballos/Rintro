@@ -1060,7 +1060,7 @@ Several R operators can be used to extract subsets (slices) from R objects:
 
 * **$** can be used to extract **named** elements from a data frame or a list.
 
-:borange:`For *Numeric Vectors*:`
+:borange:`For Numeric Vectors:`
 
 .. code-block:: r
 
@@ -1081,7 +1081,7 @@ Several R operators can be used to extract subsets (slices) from R objects:
    > a[a>100]				# access to a sequence based on a condition
    [1] 121 144 169 196 225		#  (logical index)
 
-:borange:`For *Character Vectors*:`
+:borange:`For Character Vectors:`
  
 .. code-block:: r
 
@@ -1098,7 +1098,7 @@ Several R operators can be used to extract subsets (slices) from R objects:
    > a[gtC]
    [1] "D" "E"
   
-:borange:`For *Matrices*, elements are accessed through two integer indices:`
+:borange:`For Matrices, elements are accessed through two integer indices:`
 
 .. note:: The agreement to establish the indices order ``a[i,j]`` is the same than the one used in Math for the matrix coefficients a :sub:`ij`
 
@@ -1151,7 +1151,7 @@ auxiliary matrices:
    [3,]    0    6    9   12
   
   
-:borange:`For *lists*:`
+:borange:`For lists:`
   
 The list components can be accessed using the three operators mentioned above
 (**[**, **[[** and **$**):
@@ -1261,8 +1261,8 @@ operators:
    [1] "NGC3379"
 
 
-For *Data Frames (Tables)*, the operators used for slicing are the same than
-those used for *lists*:
+:borange:`For Data Frames (Tables), the operators used for slicing are the
+same than those used for lists:`
 
 .. code-block:: r
 
@@ -1307,8 +1307,8 @@ those used for *lists*:
    > class(airquality$Ozone)
    [1] "integer"
  
-For *Character Strings* the access to their elements is done in a different
-way:
+:borange:`For Character Strings the access to their elements is done in a
+different way:`
 
 .. code-block:: r
 
