@@ -12,13 +12,12 @@ Main features of R
 
 For Linux, MacOS:
 
-.. highlight:: console
+.. code-block:: console
+   :class: no-copybutton
 
-::
-  
-  [user@pc]$ mkdir work
-  [user@pc]$ cd work
-  [user@pc work]$ R
+   [user@pc]$ mkdir work
+   [user@pc]$ cd work
+   [user@pc work]$ R
 
 .. warning::
 
@@ -196,7 +195,7 @@ Other useful commands
    > getwd() 				# return the working directory
    [1] "/home/user/R"
 
-   > setwd("/home/user/newRdir")        	# set new working directory
+   > setwd("/home/user/newRdir")       	# set new working directory
 
    > dir()				# show content of current directory
    ...					# (different from 'ls()' command
@@ -204,12 +203,12 @@ Other useful commands
     
    > history(n)				# display the last 'n' commands (default = 25)
    ...
-   ...                                   # (press "q" to EXIT)
+   ...                                  # (press "q" to EXIT)
    
    > source("filename.R")		# execute commands in the filename.R script
    
-   > sink("register.txt")               	# divert R output to an external file 
+   > sink("register.txt")               # divert R output to an external file 
     
-   > sink()                             	# stop sink-ing (results return to console)
+   > sink()                             # stop sink-ing (results return to console)
   
  

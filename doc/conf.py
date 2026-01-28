@@ -19,9 +19,9 @@ extensions = [
     'sphinx_copybutton',
 ]
 
-copybutton_prompt_text = r">>> |\.\.\. |\$ |> |\+ |\[0-9]+\] "
+copybutton_prompt_text = r">>> |\.\.\. |\$ |> |\+ "
 copybutton_prompt_is_regexp = True
-copybutton_only_copy_prompt_lines = False
+copybutton_only_copy_prompt_lines = True 
 
 templates_path = ['_templates']
 

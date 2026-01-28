@@ -19,10 +19,8 @@ On-line tutorial and courses
 * https://swcarpentry.github.io/r-novice-gapminder/
 * https://swcarpentry.github.io/r-novice-inflammation/
 * http://www.cyclismo.org/tutorial/R
-* http://tryr.codeschool.com/levels/1/challenges/1
 * *Data Analysis*, COURSERA
 * *Computing For Data Analysis*, COURSERA
-* http://tryr.codeschool.com/
 
 Center for Astrostatistics
 ==========================
