@@ -49,8 +49,8 @@ For linux:
 
    [user@pc]$ R				# invoke R
     
-   R version 4.5.1 (2025-06-13) -- "Great Square Root"
-   Copyright (C) 2025 The R Foundation for Statistical Computing
+   R version 4.6.1 (2026-06-24) -- "Happy Hoop"
+   Copyright (C) 2026 The R Foundation for Statistical Computing
    Platform: aarch64-apple-darwin20
    
    R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -155,7 +155,7 @@ Other useful commands
    :class: no-copybutton
 
    > R.version.string
-   [1] "R version 4.5.1 (2025-06-13)"
+   [1] "R version 4.6.1 (2026-06-24)"
 
    > capabilities()
         jpeg         png        tiff       tcltk         X11        aqua 
@@ -170,9 +170,10 @@ Other useful commands
    > citation()
    To cite R in publications use:
 
-     R Core Team (2025). _R: A Language and Environment for Statistical
-     Computing_. R Foundation for Statistical Computing, Vienna, Austria.
-     <https://www.R-project.org/>.
+     R Core Team (2026). _R: A Language and Environment for Statistical
+  Computing_. R Foundation for Statistical Computing, Vienna, Austria.
+  doi:10.32614/R.manuals <https://doi.org/10.32614/R.manuals>.
+  <https://www.R-project.org/>
     
    A BibTeX entry for LaTeX users is
     
@@ -181,7 +182,8 @@ Other useful commands
        author = {{R Core Team}},
        organization = {R Foundation for Statistical Computing},
        address = {Vienna, Austria},
-       year = {2025},
+       year = {2026},   
+       doi = {10.32614/R.manuals}
        url = {https://www.R-project.org/},
      }
 
