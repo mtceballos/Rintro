@@ -421,10 +421,15 @@ Frame.`
   
 .. _dataframes:
 
-:bmagenta:`Data Frames (Tables)`
---------------------------------
+:bmagenta:`Data Frames` and `Tables`
+-------------------------------------
 
 A *Data Frame* is an special type of list very useful for the statistical work.
+Basically, in a *Data Frame* all the information is displayed in a tabular form 
+where the columns have the same number of rows and can contain different type
+objects (numbers, characters, ...). Usually, in a *Data Frame* rows correspond to cases and 
+columns correspond to variables.
+
 There are some restrictions to guarantee that they can be used for this
 statistical purpose.
 
@@ -450,10 +455,6 @@ Among other restrictions, a *Data Frame* must verify that:
   preferred over factors. The old default of treating character strings as
   categorical factors caused confusion, unexpected bugs, and required
   unnecessary conversions. 
-
-Basically, in a *Data Frame* all the information is displayed as a **table**
-where the columns have the same number of rows and can contain different type
-objects (numbers, characters, ...).
   
 *Data Frames* can be created using the ``data.frame()`` function. Let's see how
 to define a *data frame* with two elements, a numeric vector and a character
@@ -497,10 +498,11 @@ see later how to do it using ``read.table()`` function.
   
 .. _factorsTables:
 
-Factors and Tables
-******************
-
-It is frequently useful (for instance, for table creation) to be able to
+Factors and Contingency Tables
+*******************************
+**Tables** (not to be confused with data frames) stores counts (frequencies) 
+obtained by cross-classifying one or more categorical variables.
+It is frequently useful for table creation to be able to
 generate factors from a numeric continuum variable. To do so, we can use the
 ``cut`` command. Its parameter ``breaks`` defines how the data are divided.
 **If** ``breaks`` **is a number**, this is used as the number of (same length)
